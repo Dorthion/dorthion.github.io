@@ -9,7 +9,7 @@ Projects:
 
 -Gallery (What i did: Game/Music/Art etc.)
 
-List (Of copy writed stuff):
+List (Of copyrighted stuff - not my own, named + linked):
 
 -Teminite & Panda Eyes - Highscore (https://www.youtube.com/watch?v=Qg1qZq5yjps)
 
