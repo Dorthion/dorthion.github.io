@@ -12,3 +12,7 @@ Projects:
 List (Of copy writed stuff):
 
 -Teminite & Panda Eyes - Highscore (https://www.youtube.com/watch?v=Qg1qZq5yjps)
+
+-NEFFEX - Rumours (https://www.youtube.com/watch?v=kXptPzKNMq4)
+
+-Araki - Teo (https://www.youtube.com/watch?v=DStvfO_EWGU)
