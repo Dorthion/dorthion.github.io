@@ -536,19 +536,26 @@ button.onclick=()=>{
 		}
 	}
 		resizeDivs();
+		
 		var startTime2 = Date.now();
-
 		var interval2 = setInterval(function() {
 			var elapsedTime2 = Date.now() - startTime2;
-			//document.getElementById("timer").innerHTML = (elapsedTime / 1);
-			document.getElementById("foo").style.opacity="0."+(elapsedTime2 / 0.1);
+			//document.getElementById("timer").innerHTML = (elapsedTime / 1);	
+			//console.log(elapsedTime2);
+			if(parseInt(elapsedTime2)<500)
+			{
+				document.getElementById("foo").style.opacity="0."+(elapsedTime2 / 0.1);
+				clearInterval(elapsedTime2); 
+				clearInterval(startTime2); 
+				//console.log(elapsedTime2);
+			}
 		}, 1);
-	}
-background.onload = function(){
-	
+		var audio1 = new Audio('Highscore.mp3');
+		audio1.play();
+		document.addEventListener('keydown', (event) => {
+			const keyName = event.key;
+			if(keyName=='s')
+				{
+					audio1.pause();
+				}
 }
-
-
-		
-	
-	

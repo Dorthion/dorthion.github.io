@@ -19,7 +19,6 @@
 	var logo1= new Image(100,100);
 	logo1.src = '1.png';
 	document.body.appendChild(logo1);
-	//$(body).css('opacity', '0.2');
 function random(min,max){
 	return Math.random()*(max-min)+min;
 }	
@@ -27,8 +26,6 @@ function random(min,max){
 var background = new Image ('PandaHighscore.jpg');
 //document.body.style.background = "url(" + div.toDataURL(background) + ")";
 
-
-var audio1 = new Audio('Highscore.mp3');
 var audio2 = new Audio('Rumors.mp3');
 var audio3 = new Audio('Teo.mp3');
 
@@ -40,32 +37,27 @@ document.addEventListener('keydown', (event) => {
 	{
 		audio2.pause();
 		audio3.pause();
-		audio1.play();
 		break;
 	}
   case 's':
 	{	
-		audio1.pause();
 		audio2.pause();
 		audio3.pause();
 		break;
 	}
   case 'd':
 	{
-		audio1.pause();
 		audio3.pause();
 		audio2.play();
 		break;
 	}
 	case 'w': 
 	{
-		audio1.pause();
 		audio2.pause();
 		audio3.play();
 		break;
 	}
   }
-  
   //var button=document.getElementById('#Przycisk');
 //document.getElementById("myBtn").onclick
 //document.getElementById("#Przycisk").onclick=console.log("wcisnieto");
@@ -74,15 +66,12 @@ document.addEventListener('keydown', (event) => {
 	//console.log("wcisnieto");
 	
 //}
-
 var startTime = Date.now();
 
 var interval = setInterval(function() {
     var elapsedTime = Date.now() - startTime;
     document.getElementById("timer").innerHTML = (elapsedTime / 1);
 }, 1);
-  
-  
 });
 </script>
 </body>
