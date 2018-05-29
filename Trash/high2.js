@@ -503,17 +503,19 @@ var body = document.querySelector("body");
 document.getElementById('foo').appendChild(button);
 button.innerText="Start";
 
-window.onload=()=>{
-document.getElementById("backk").style.background = "url('SongBackground/PandaHighscore.jpg')";
-}
+//window.onload=()=>{
+//document.getElementById("backk").style.background = "url('SongBackground/PandaHighscore.jpg')";
+//}
 button2.onclick=()=>{
 	document.getElementById("backk").style.background = "url('SongBackground/PandaHighscore.jpg')";
+	document.getElementById("pudlo").style.display = "none";
 }
 
 button.onclick=()=>{
 		console.log("LOOOL");
 		document.body.style.backgroundImage = background;
 		document.getElementById("backk").style.background = "url('SongBackground/PandaHighscore.jpg')";
+		document.getElementById("pudlo").style.display = "none";
 		var dl1=window.screen.availHeight;
 		var dl2=window.screen.availWidth;
 		console.log(dl1);		
