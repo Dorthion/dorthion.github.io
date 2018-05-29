@@ -15,6 +15,23 @@ A)HIGH2.JS
 		//document.getElementById("foo").style.width="100%";
 		
 		
+		
+			//setTimeout(function() {
+					// rest of code here
+			//	}, 2000);
+				
+		//	function pause(numberMillis) {
+		//	var now = new Date();
+			//	var exitTime = now.getTime() + numberMillis;
+			//	while (true) {
+			//		now = new Date();
+			//		if (now.getTime() > exitTime)
+			//	return;
+			//}
+			//}
+			//pause(10);
+
+
 B)NOWKA.HTML
 
 //var button=document.getElementById('#Przycisk');

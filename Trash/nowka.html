@@ -19,15 +19,16 @@
 <span id="timer"></span> s</div>
 <script>
 	var logo1= new Image(100,100);
-	logo1.src = '1.png';
-	document.body.appendChild(logo1);
+	logo1.src = 'MusicIcons/1.png';
+	//document.body.appendChild(logo1);
 function random(min,max){
 	return Math.random()*(max-min)+min;
-}	
-
-var background = new Image ('PandaHighscore.jpg');
-//document.body.style.background = "url(" + div.toDataURL(background) + ")";
-
+}
+var main = document.getElementById('backk').offsetHeight;
+var sidebar = document.getElementById('body').offsetHeight;
+var menuimage = "url('MenuBackground/Background"+parseInt(random(1,7))+".jpg'";
+document.getElementById("backk").style.background = menuimage;
+	
 var audio2 = new Audio('Rumors.mp3');
 var audio3 = new Audio('Teo.mp3');
 
@@ -35,12 +36,6 @@ document.addEventListener('keydown', (event) => {
   const keyName = event.key;
   //alert('keydown event\n\n' + 'key: ' + keyName);
   switch (keyName){
-  case 'a': 
-	{
-		audio2.pause();
-		audio3.pause();
-		break;
-	}
   case 's':
 	{	
 		audio2.pause();
@@ -60,7 +55,6 @@ document.addEventListener('keydown', (event) => {
 		break;
 	}
   }
-  
 var startTime = Date.now();
 
 var interval = setInterval(function() {
