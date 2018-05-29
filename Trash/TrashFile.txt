@@ -1,0 +1,27 @@
+NIE POTRZEBNE KOMENTARZE:
+A)HIGH2.JS
+
+//var b = document.getElementById("foo");
+		//b.style.backgroundImage = "url(" + img + ")";
+		//document.getElementById("foo").style.background = "url('PandaHighscore.jpg')";
+
+		
+		//var dl3=window.screen.height;
+		//var dl4=window.screen.width;
+		//console.log(dl3);		
+		//console.log(dl4);
+		//document.getElementById("foo").style.height="100%";
+		//console.log(document.getElementById("foo").style.height);
+		//document.getElementById("foo").style.width="100%";
+		
+		
+B)NOWKA.HTML
+
+//var button=document.getElementById('#Przycisk');
+//document.getElementById("myBtn").onclick
+//document.getElementById("#Przycisk").onclick=console.log("wcisnieto");
+	//button.onclick=()=>{
+	///load("aha.js");
+	//console.log("wcisnieto");
+	
+//}

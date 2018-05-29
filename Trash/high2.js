@@ -499,63 +499,56 @@ var song = [
 var background = new Image ('PandaHighscore.jpg');
 var button = document.createElement('button');
 var body = document.querySelector("body");
-body.appendChild(button);
+document.getElementById('foo').appendChild(button);
 button.innerText="Wcisnij mnie";
 
 button.onclick=()=>{
 		console.log("LOOOL");
 		document.body.style.backgroundImage = background;
-		//var b = document.getElementById("foo");
-		//b.style.backgroundImage = "url(" + img + ")";
-		//document.getElementById("foo").style.background = "url('PandaHighscore.jpg')";
-		document.getElementById("foo").style.background = "url('PandaHighscore.jpg')";
+		
+		document.getElementById("backk").style.background = "url('PandaHighscore.jpg')";
 		var dl1=window.screen.availHeight;
 		var dl2=window.screen.availWidth;
 		console.log(dl1);		
 		console.log(dl2);
-		//var dl3=window.screen.height;
-		//var dl4=window.screen.width;
-		//console.log(dl3);		
-		//console.log(dl4);
-		//document.getElementById("foo").style.height="100%";
-		//console.log(document.getElementById("foo").style.height);
-		//document.getElementById("foo").style.width="100%";
-		
 		
 		function resizeDivs() {
-		var main = document.getElementById('foo').offsetHeight;
+		var main = document.getElementById('backk').offsetHeight;
 		var sidebar = document.getElementById('body').offsetHeight;
 		console.log(main);		
 		console.log(sidebar);
 		if (sidebar > main) {
 			main = sidebar;
-			document.getElementById('foo').style.height = document.getElementById('body').style.height = dl1 + 'px';
+			document.getElementById('backk').style.height = document.getElementById('body').style.height = dl1 + 'px';
 		} else {
 			sidebar = main;
-			document.getElementById('body').style.height = document.getElementById('foo').style.height = dl1 + 'px' - main;
+			document.getElementById('body').style.height = document.getElementById('backk').style.height = dl1 + 'px' - main;
 		}
 	}
 		resizeDivs();
 		
 		var startTime2 = Date.now();
 		var interval2 = setInterval(function() {
-			var elapsedTime2 = Date.now() - startTime2;
+			var elapsedTime2 = Date.now() - startTime2 + 100;
 			//document.getElementById("timer").innerHTML = (elapsedTime / 1);	
 			//console.log(elapsedTime2);
 			if(parseInt(elapsedTime2)<500)
 			{
-				document.getElementById("foo").style.opacity="0."+(elapsedTime2 / 0.1);
+				document.getElementById("backk").style.opacity="0."+(elapsedTime2 / 0.1);
 				clearInterval(elapsedTime2); 
 				clearInterval(startTime2); 
 				//console.log(elapsedTime2);
 			}
 		}, 1);
+		
 		var audio1 = new Audio('Highscore.mp3');
 		audio1.play();
+		
 		document.addEventListener('keydown', (event) => {
-			const keyName = event.key;
-			if(keyName=='s')
+			const keyName2 = event.key;
+			if(keyName2=='s')
 				{
 					audio1.pause();
 				}
+		})
 }
