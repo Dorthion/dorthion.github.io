@@ -5,13 +5,15 @@
 	<title>Last game</title>
 	<link type="text/css" rel="stylesheet" href="style.css">
 	<link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,400i,700,700i&amp;subset=latin-ext" rel="stylesheet">
-	<!--<script type="text/javascript" src="js.js"></script>-->
+	<script type="text/javascript" src="ladowanie.js"></script>
 	<meta name="description" content="Witaj, tutaj znajdziesz fajna gierke" />
 	<meta name="author" content="Dorthion" />
 </head>
-<body>
-<canvas width="400px" height="620px">
+<body><div id="foo">
+<canvas width="600px" height="400px" id="lol">
 </canvas>
+<button id="Przycisk" onclick="load('high.js')">Zaladuj Piosenke Highscore</button>
+<span id="timer"></span> s</div>
 <script>
 	var plansza = document.querySelector('canvas');
 	var ctx = plansza.getContext('2d');
@@ -19,6 +21,10 @@
 	var x = 100,y=100;
 	var arr=[];
 	var radius = 70;
+	
+	var logo1= new Image(100,100);
+	logo1.src = '1.png';
+	document.body.appendChild(logo1);
 	
 function random(min,max){
 	return Math.random()*(max-min)+min;
@@ -30,6 +36,7 @@ arr[x]=new Kolko(random(0,400),random(0,400),random(5,30)
 ,'rgba(50,100,100,0.4)'
 ,random(1,10),random(1,10));
 }
+var background = new Image ('PandaHighscore.jpg');
 
 function Kolko(x,y,r,color,vx,vy)
 {
@@ -45,7 +52,9 @@ Kolko.prototype.rysuj=function()
 {	
 	ctx.beginPath();
 	ctx.arc(this.x, this.y, this.r, 0, 2 * Math.PI, false);
-	ctx.fillStyle = "black";
+	//ctx.fillStyle = "gray";
+	//ctx.drawImage(background,0,0); 
+	document.body.canvas.style.background = "url(" + plansza.toDataURL(background) + ")";
 	ctx.strokeStyle = 'rgba(0, 255, 255, 0.4)';
 	ctx.fill();
 	ctx.stroke();
@@ -56,11 +65,11 @@ if(this.x+this.r<=0){
 this.vx=-this.vx;
 
 }
-if(this.x+this.r>=620){
+if(this.x+this.r>=600){
 this.vx=-this.vx;
 
 }
-if(this.y+this.r>=620){
+if(this.y+this.r>=600){
 this.vy=-this.vy;
 
 }
@@ -73,10 +82,11 @@ this.y+=this.vy;
 }
 
 function petla(y){
-ctx.fillRect(0,0,400,620);
+ctx.fillRect(0,0,600,400);
 for(y=100;y>0;y--){
 arr[y].rysuj();
-arr[y].next();}
+arr[y].next();
+}
 
 window.requestAnimationFrame(petla);
 }
@@ -119,6 +129,24 @@ document.addEventListener('keydown', (event) => {
 		break;
 	}
   }
+  
+  //var button=document.getElementById('#Przycisk');
+//document.getElementById("myBtn").onclick
+//document.getElementById("#Przycisk").onclick=console.log("wcisnieto");
+	//button.onclick=()=>{
+	///load("aha.js");
+	//console.log("wcisnieto");
+	
+//}
+
+var startTime = Date.now();
+
+var interval = setInterval(function() {
+    var elapsedTime = Date.now() - startTime;
+    document.getElementById("timer").innerHTML = (elapsedTime / 1);
+}, 1);
+  
+  
 });
 </script>
 </body>

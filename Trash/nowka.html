@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+	<meta lang="PL">
+	<title>Last game</title>
+	<link type="text/css" rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,400i,700,700i&amp;subset=latin-ext" rel="stylesheet">
+	<script type="text/javascript" src="ladowanie.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	<meta name="description" content="Witaj, tutaj znajdziesz fajna gierke" />
+	<meta name="author" content="Dorthion" />
+</head>
+<body id="body"><div id="foo">
+<input id="wartosc" type="text"></input>
+<button id="licz">Change Opacity</button>
+<button id="Przycisk" onclick="load('high2.js')">Zaladuj Piosenke Highscore</button>
+<span id="timer"></span> s</div>
+<script>
+	var logo1= new Image(100,100);
+	logo1.src = '1.png';
+	document.body.appendChild(logo1);
+	//$(body).css('opacity', '0.2');
+function random(min,max){
+	return Math.random()*(max-min)+min;
+}	
+
+var background = new Image ('PandaHighscore.jpg');
+//document.body.style.background = "url(" + div.toDataURL(background) + ")";
+
+
+var audio1 = new Audio('Highscore.mp3');
+var audio2 = new Audio('Rumors.mp3');
+var audio3 = new Audio('Teo.mp3');
+
+document.addEventListener('keydown', (event) => {
+  const keyName = event.key;
+  //alert('keydown event\n\n' + 'key: ' + keyName);
+  switch (keyName){
+  case 'a': 
+	{
+		audio2.pause();
+		audio3.pause();
+		audio1.play();
+		break;
+	}
+  case 's':
+	{	
+		audio1.pause();
+		audio2.pause();
+		audio3.pause();
+		break;
+	}
+  case 'd':
+	{
+		audio1.pause();
+		audio3.pause();
+		audio2.play();
+		break;
+	}
+	case 'w': 
+	{
+		audio1.pause();
+		audio2.pause();
+		audio3.play();
+		break;
+	}
+  }
+  
+  //var button=document.getElementById('#Przycisk');
+//document.getElementById("myBtn").onclick
+//document.getElementById("#Przycisk").onclick=console.log("wcisnieto");
+	//button.onclick=()=>{
+	///load("aha.js");
+	//console.log("wcisnieto");
+	
+//}
+
+var startTime = Date.now();
+
+var interval = setInterval(function() {
+    var elapsedTime = Date.now() - startTime;
+    document.getElementById("timer").innerHTML = (elapsedTime / 1);
+}, 1);
+  
+  
+});
+</script>
+</body>
+</html>

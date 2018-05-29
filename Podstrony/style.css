@@ -1,6 +1,6 @@
 *{
 	padding: 0;
-	margin-left: 12%;
+	margin-left: 0;
 	box-sizing: border-box;
 }
 body{
@@ -8,6 +8,7 @@ body{
 	color:white;
 	font-family: 'Cormorant Garamond', serif;
 	font-size:30px;
+opacity: 0.4;
 }
 #osu{
 	position:absolute;
@@ -17,4 +18,8 @@ body{
 .osuu-icon{
 	width:50px;
 	height:50px;
+}
+div {
+  width: 100%;
+  height: 100%;
 }
