@@ -37,14 +37,13 @@ button.onclick=()=>{
 		}
 	}
 		resizeDivs();
-				var licznik=0;
+		var licznik=0;
 		var startTime2 = Date.now();
 		var interval2 = setInterval(function() {
 			var elapsedTime2 = Date.now() - startTime2;
 			//document.getElementById("timer").innerHTML = (elapsedTime / 1);	
 			//console.log(elapsedTime2);
 			var k=999-elapsedTime2;
- 
 			if(parseInt(k)>500)
 			{
 				document.getElementById("backk").style.opacity="0."+(k);
