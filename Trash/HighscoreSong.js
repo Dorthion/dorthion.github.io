@@ -11,6 +11,7 @@ button.innerText="Start";
 button2.onclick=()=>{
 	document.getElementById("backk").style.background = "url('SongBackground/PandaHighscore.jpg')";
 	document.getElementById("pudlo").style.display = "none";
+	document.getElementById("index").style.display = "none";
 }
 
 button.onclick=()=>{

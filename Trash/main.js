@@ -4,14 +4,24 @@ var logo1= new Image(100,100);
 function random(min,max){
 	return Math.random()*(max-min)+min;
 }
-var menuimage = "url('MenuBackground/Background"+parseInt(random(1,12))+".jpg'";
+var menuimage = "url('MenuBackground/Background"+parseInt(random(1,17))+".jpg'";
 document.getElementById("backk").style.background = menuimage;
-function resizeDivs2() {
-		var dlug1=window.screen.availHeight;
-		var dlug2=window.screen.availWidth;
-		document.getElementById("backk").style.backgroundSize = dlug2+"px "+dlug1+"px";
+
+var dlug1=window.screen.availHeight;
+var dlug2=window.screen.availWidth;
+document.getElementById("backk").style.backgroundSize = dlug2+"px "+dlug1+"px";
+//function resizeDivs2() {} Moze sie przydac pozniej
+//resizeDivs2();
+function addDiv() {
+	var DownMenu = document.getElementById("dol");
+	var authors = document.createElement('div');
+	var authorst = document.createElement('p');	
+	var textnode ="Game idea and resources from Osu! by Ppy";
+	var lol="Remake by NightmareYandere";
+	authorst.innerHTML=textnode+"<br>"+lol;
+	DownMenu.appendChild(authorst);
 }
-resizeDivs2();
+addDiv();
 var audio2 = new Audio('Rumors.mp3');
 var audio3 = new Audio('Teo.mp3');
 

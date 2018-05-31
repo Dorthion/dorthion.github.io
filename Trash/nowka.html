@@ -7,25 +7,34 @@
 	<link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,400i,700,700i&amp;subset=latin-ext" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Exo+2:400,400i&amp;subset=latin-ext" rel="stylesheet">
 	<script type="text/javascript" src="ladowanie.js"></script>
-	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	<!--<script src="https://code.jquery.com/jquery-3.3.1.js"></script>-->
 	<meta name="description" content="Witaj, tutaj znajdziesz fajna gierke" />
 	<meta name="author" content="Dorthion" />
 </head>
 <body id="body">
+<!--Background Image-->
 <div id="backk"></div>
+
+<!--Center Logo-->
 <div id="pudlo"><center><div id="logoosu"></div></center></div>
+
+<!--Main Buttons-->
+<div id="MainMenu">
+<div id="index"><div id="gora"></div><div id="dol"></div></div>
 <div id="foo">
 <input id="wartosc" type="range"></input>
 <button id="licz">Change Opacity</button>
 <button id="Przycisk" onclick="load('HighscoreCircles.js'); load('HighscoreSong.js');">Zaladuj Piosenke Highscore</button>
-<span id="timer"></span> s</div>
+<span id="timer"></span> s</div></div>
+
+<!--Start Osu!JS-->
 <div id="ciemnia"><center><button id="Przycisk2">Run Osu!JS</button></center></div>
 </body>
 <script>
 var przyciskk = document.getElementById("Przycisk2");
 przyciskk.onclick=()=>{
 	document.getElementById("ciemnia").style.display ="none";
-	document.getElementById("foo").style.display = "inline";
+	document.getElementById("MainMenu").style.display = "inline";
 	document.getElementById("backk").style.display = "inline";
 	load('main.js')
 }
