@@ -19,6 +19,13 @@ var audio3 = new Audio('Teo.mp3');
 	mainlogo.src = 'MenuBackground/OsuWow.png';
 	document.getElementById("logoosu").appendChild(mainlogo);
 	
+	var startTime = Date.now();
+	var interval = setInterval(function() {
+    var elapsedTime = Date.now() - startTime;
+    document.getElementById("timer").innerHTML = (elapsedTime / 1);
+}, 1);
+	
+//REMEMBER TO DELETE THIS LATER
 document.addEventListener('keydown', (event) => {
   const keyName = event.key;
   //alert('keydown event\n\n' + 'key: ' + keyName);
@@ -42,10 +49,4 @@ document.addEventListener('keydown', (event) => {
 		break;
 	}
   }
-var startTime = Date.now();
-
-var interval = setInterval(function() {
-    var elapsedTime = Date.now() - startTime;
-    document.getElementById("timer").innerHTML = (elapsedTime / 1);
-}, 1);
 });
