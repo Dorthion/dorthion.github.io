@@ -42,3 +42,29 @@ B)NOWKA.HTML
 	//console.log("wcisnieto");
 	
 //}
+
+
+C)HIGHSCORESONG.JS
+
+let licznik3=0;
+		//Wczytanie stylu kó³ek
+		var n1 = new Image ('MusicIcons/1.jpg');
+		var n2 = new Image ('MusicIcons/2.jpg');
+		var n3 = new Image ('MusicIcons/3.jpg');
+		var n4 = new Image ('MusicIcons/4.jpg');
+		console.log(song[2+licznik3]);
+		var startTime3 = Date.now();
+		var interval3 = setInterval(function() {
+			var elapsedTime2 = Date.now() - startTime3;
+			//var g=50-elapsedTime2;
+			//var numm=song[2];
+			//console.log(elapsedTime2);
+			//console.log(numm);
+			if(parseInt(song[2+licznik3])<elapsedTime2)
+			{
+				console.log(parseInt(song[2+licznik3]));
+				console.log(elapsedTime2);
+				console.log("woot");
+				licznik3=licznik3+3;
+			}
+		}, 1);

@@ -1,30 +1,20 @@
+//Dane wejsciowe
 var background = new Image ('PandaHighscore.jpg');
 var button = document.createElement('button');
 var button2 = document.getElementById('Przycisk');
 var body = document.querySelector("body");
+var dl1=window.screen.availHeight;
+var dl2=window.screen.availWidth;
 document.getElementById('foo').appendChild(button);
 button.innerText="Start";
 
-//window.onload=()=>{
-//document.getElementById("backk").style.background = "url('SongBackground/PandaHighscore.jpg')";
-//}
-button2.onclick=()=>{
+function backgrounds(){
 	document.getElementById("backk").style.background = "url('SongBackground/PandaHighscore.jpg')";
 	document.getElementById("pudlo").style.display = "none";
 	document.getElementById("index").style.display = "none";
 }
 
-button.onclick=()=>{
-		console.log("LOOOL");
-		document.body.style.backgroundImage = background;
-		document.getElementById("backk").style.background = "url('SongBackground/PandaHighscore.jpg')";
-		document.getElementById("pudlo").style.display = "none";
-		var dl1=window.screen.availHeight;
-		var dl2=window.screen.availWidth;
-		console.log(dl1);		
-		console.log(dl2);
-		
-		function resizeDivs() {
+function resizeDivs() {
 		var main = document.getElementById('backk').offsetHeight;
 		var sidebar = document.getElementById('body').offsetHeight;
 		console.log(main);		
@@ -37,7 +27,17 @@ button.onclick=()=>{
 			document.getElementById('body').style.height = document.getElementById('backk').style.height = dl1 + 'px' - main;
 		}
 	}
-		resizeDivs();
+//Uruchamianie funckji:
+backgrounds();
+resizeDivs();
+
+button.onclick=()=>{
+		//console.log("LOOOL");
+		document.body.style.backgroundImage = background;
+		//document.getElementById("backk").style.background = "url('SongBackground/PandaHighscore.jpg')";
+		document.getElementById("pudlo").style.display = "none";
+		console.log(dl1);		
+		console.log(dl2);
 		var licznik=0;
 		var startTime2 = Date.now();
 		var interval2 = setInterval(function() {
@@ -64,4 +64,6 @@ button.onclick=()=>{
 					audio1.pause();
 				}
 		})
+		load('HighscoreSong2.js');
+		
 }
