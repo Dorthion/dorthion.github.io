@@ -12,8 +12,9 @@
 				console.log(elapsedTime3);
 				console.log("woot");
 				let reszta=licznik3%4;
-				let Jppg = 'n'+reszta;
-				gra.innerHTML += '<img src="MusicIcons/'+(reszta+1)+'.png" />';
+				gra.innerHTML += '<img class="n'+reszta+'" src="MusicIcons/'+(4-reszta)+'.png" />';
+				//document.getElementsByClassName('n'+reszta).style.left=song[0+licznik3]+' px';
+				//document.getElementsByClassName('n'+reszta).style.top=song[1+licznik3]+' px';
 				licznik3=licznik3+3;
 			}
 }, 1);

@@ -25,16 +25,37 @@ addDiv();
 var audio2 = new Audio('Rumors.mp3');
 var audio3 = new Audio('Teo.mp3');
 
-	var mainlogo = new Image(500,500);    //OSU!JS LOGO
+	let mainlogo = new Image(500,500);    //OSU!JS LOGO
 	mainlogo.src = 'MenuBackground/OsuWow.png';
 	document.getElementById("logoosu").appendChild(mainlogo);
+	/*button.addEventListener("mouseover", function(){
+		this.classList.add('mouse-over');
+	});*/
+	//TIMER
+		var startTime = Date.now();
+		var interval = setInterval(function() {
+		var elapsedTime = Date.now() - startTime;
+		document.getElementById("timer").innerHTML = (elapsedTime / 1);
+	}, 1);
 	
-	var startTime = Date.now();
-	var interval = setInterval(function() {
-    var elapsedTime = Date.now() - startTime;
-    document.getElementById("timer").innerHTML = (elapsedTime / 1);
-}, 1);
+	mainlogo.addEventListener("mouseout", function(){
+		console.log("XD");
+	});
 	
+
+	mainlogo.addEventListener("mousedown", function(){
+		
+	});
+
+	mainlogo.addEventListener("mouseup", function(){
+		//document.getElementById("logoosu").style.left="-150px";
+		document.getElementById("logoosu").style.transition="none";
+		document.getElementById("logoosu").setAttribute("id", "logoosu2");
+		console.log("I bardzo dobrze");
+	});
+	
+	load('wgracza.js');
+
 //REMEMBER TO DELETE THIS LATER
 document.addEventListener('keydown', (event) => {
   const keyName = event.key;

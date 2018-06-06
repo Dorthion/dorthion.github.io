@@ -175,3 +175,53 @@ input[type=range]:focus::-ms-fill-upper {
 	witdh: 50px;
 	height: 50px;
 }
+.n1{
+	position:absolute;
+	left:0px;
+	top:0px;
+}
+.n2{
+	position:absolute;
+	left:0px;
+	top:0px;
+}
+.n3{
+	position:absolute;
+	left:0px;
+	top:0px;
+}
+.n4{
+	position:absolute;
+	left:0px;
+	top:0px;
+}
+.wgracz{
+	width:5%;
+	height: 10%;
+	margin: 3px 9px 3px 3px;
+}
+#wgracz img{
+	float: left;
+}
+#wgracz {
+	position: absolute;
+	font-size: 18px;
+}
+#logoosu {
+    position: relative;
+	width:500px;
+	height:500px;
+    top: 0px;
+    transition: transform .1s ease-in-out;
+	left: 0px;
+}
+#logoosu:active{
+	transform: translateX(-150px);
+}
+#logoosu2 {
+    position: relative;
+	width:500px;
+	height:500px;
+    top: 0px;
+	left: -150px;
+}
