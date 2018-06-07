@@ -37,19 +37,52 @@ var audio3 = new Audio('Teo.mp3');
 		var elapsedTime = Date.now() - startTime;
 		document.getElementById("timer").innerHTML = (elapsedTime / 1);
 	}, 1);
+	let czyruszony = 0;
+	//Automatyczne zamkniecie
+	function auto(czyruszony){
+		if(parseInt(czyruszony)==1){
+		czyruszony="-5000";
+		var logoTime = Date.now();
+		var logointerval = setInterval(function() {
+			let elapsedTimeXD = Date.now() - logoTime;
+			console.log("tak");
+			if(elapsedTimeXD>5000 && elapsedTimeXD<6000){
+				czyruszony=0;
+				document.getElementById("logoosu2").setAttribute("id", "logoosu3");
+			}
+			if(elapsedTimeXD>6000 && elapsedTimeXD<7000){
+				document.getElementById("logoosu3").setAttribute("id", "logoosu4");
+			}
+			if(elapsedTimeXD>7000){
+				clearInterval(logointerval);
+				document.getElementById("logoosu4").setAttribute("id", "logoosu");
+			}
+		}, 999); 
+		}
+	}
+	
 	
 	mainlogo.addEventListener("mouseout", function(){
+		
+		auto(czyruszony);
+		czyruszony=5000;
 		console.log("XD");
 	});
 	
-
+	/*mainlogo.addEventListener("mousein", function(){
+		auto();
+		console.log("XD");
+	});*/
+	
 	mainlogo.addEventListener("mousedown", function(){
-		
+		if(czyruszony>=1)
+		{
+			czyruszony=0;
+		}
 	});
 
 	mainlogo.addEventListener("mouseup", function(){
-		//document.getElementById("logoosu").style.left="-150px";
-		document.getElementById("logoosu").style.transition="none";
+		czyruszony++;
 		document.getElementById("logoosu").setAttribute("id", "logoosu2");
 		console.log("I bardzo dobrze");
 	});

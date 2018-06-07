@@ -212,7 +212,7 @@ input[type=range]:focus::-ms-fill-upper {
 	width:500px;
 	height:500px;
     top: 0px;
-    transition: transform .1s ease-in-out;
+    transition: transform .1s ease-out;
 	left: 0px;
 }
 #logoosu:active{
@@ -224,4 +224,20 @@ input[type=range]:focus::-ms-fill-upper {
 	height:500px;
     top: 0px;
 	left: -150px;
+}
+#logoosu3 {
+    position: relative;
+	width:500px;
+	height:500px;
+    top: 0px;
+	left: -150px;
+	transition: transform .8s ease-in-out;
+	transform: translateX(150px);
+}
+#logoosu4 {
+    position: relative;
+	width:500px;
+	height:500px;
+    top: 0px;
+	left: 0px;
 }
