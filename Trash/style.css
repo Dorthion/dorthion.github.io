@@ -241,3 +241,10 @@ input[type=range]:focus::-ms-fill-upper {
     top: 0px;
 	left: 0px;
 }
+.trail {
+    position: absolute;
+    height: 6px; 
+	width: 6px;
+    border-radius: 3px;
+    background: teal;
+ }

@@ -88,6 +88,7 @@ var audio3 = new Audio('Teo.mp3');
 	});
 	
 	load('wgracza.js');
+	load('trail.js');
 
 //REMEMBER TO DELETE THIS LATER
 document.addEventListener('keydown', (event) => {
