@@ -172,25 +172,25 @@ input[type=range]:focus::-ms-fill-upper {
 	display:inline;
 }
 #gra img{
-	witdh: 50px;
-	height: 50px;
+	witdh: 150px;
+	height: 150px;
 }
-.n1{
+#n0{
 	position:absolute;
 	left:0px;
 	top:0px;
 }
-.n2{
+#n1{
 	position:absolute;
 	left:0px;
 	top:0px;
 }
-.n3{
+#n2{
 	position:absolute;
 	left:0px;
 	top:0px;
 }
-.n4{
+#n3{
 	position:absolute;
 	left:0px;
 	top:0px;

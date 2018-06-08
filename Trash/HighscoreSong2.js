@@ -12,9 +12,38 @@
 				console.log(elapsedTime3);
 				console.log("woot");
 				let reszta=licznik3%4;
-				gra.innerHTML += '<img class="n'+reszta+'" src="MusicIcons/'+(4-reszta)+'.png" />';
-				//document.getElementsByClassName('n'+reszta).style.left=song[0+licznik3]+' px';
-				//document.getElementsByClassName('n'+reszta).style.top=song[1+licznik3]+' px';
+				gra.innerHTML += '<img id="n'+reszta+'" src="MusicIcons/'+(4-reszta)+'.png" />';
+				function cirlees(x_pos, y_pos) {
+					var clickcircles = document.getElementById('n'+reszta);
+					clickcircles.style.left = x_pos+'px';
+					clickcircles.style.top = y_pos+'px';
+					if(licznik3>8)
+						{
+							switch(reszta){
+								case 0: {//1
+									var image1 = document.getElementById('n'+3);
+									gra.removeChild(image1);
+									break;
+								}
+								case 1: {//2
+									var image2 = document.getElementById('n0');
+									gra.removeChild(image2);
+									break;
+								}
+								case 2: {//3
+									var image3 = document.getElementById('n'+1);
+									gra.removeChild(image3);
+									break;
+								}
+								case 3: {//4
+									var image4 = document.getElementById('n'+2);
+									gra.removeChild(image4);
+									break;
+								}
+							}
+						}
+				}
+				cirlees(song[0+licznik3],song[1+licznik3]);
 				licznik3=licznik3+3;
 			}
 }, 1);
