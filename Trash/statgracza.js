@@ -12,7 +12,6 @@ wgracz.setAttribute("id","wgracz");
 
 wgracz.innerHTML += '<img class="wgracz" src="Icons/avatar-guest.png" />';
 wstats.innerHTML="<strong>"+nick+"</strong><br>"+performance+wpp+"<br>"+accuracy+waccur;
-//.appendChild(authorst);
 
 document.getElementById('index').appendChild(wgracz);
 document.getElementById('wgracz').appendChild(wstats);

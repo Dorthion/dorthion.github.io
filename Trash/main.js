@@ -149,7 +149,7 @@ addDiv();
 	});
 	
 	//Wczytywanie dodatków
-	load('wgracza.js');
+	load('statgracza.js');
 	load('trail.js');
 	
 /*
