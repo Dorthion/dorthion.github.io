@@ -147,10 +147,9 @@ addDiv();
 	exit.addEventListener("mousedown", function(){
 		close();
 	});
-	
 	//Wczytywanie dodatków
-	load('statgracza.js');
 	load('trail.js');
+	load('statgracza.js');
 	
 /*
 //REMEMBER TO DELETE THIS LATER
