@@ -38,7 +38,7 @@ function giereczka(){
 		document.getElementById("pudlo").style.display = "none";
 		console.log(dl1);		
 		console.log(dl2);
-		var licznik=0;
+		let licznik=0;
 		var startTime2 = Date.now();
 		var interval2 = setInterval(function() {
 			var elapsedTime2 = Date.now() - startTime2;
@@ -54,7 +54,7 @@ function giereczka(){
 			}
 		}, 1);
 		
-		var audio1 = new Audio('Highscore.mp3');
+		let audio1 = new Audio('Highscore.mp3');
 		audio1.play();
 		
 		document.addEventListener('keydown', (event) => {

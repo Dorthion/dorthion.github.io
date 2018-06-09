@@ -1,5 +1,14 @@
 //Wczytanie stylu kółek
 		let licznik3=0;
+		let combo=0;
+		let points=0;
+		let p300=0;
+		let p100=0;
+		let p50=0;
+		let miss=0;
+		let mnoznik=1;
+		let celnosc=100.00;
+		let hp=100;
 		var gra = document.createElement('div');
 		gra.setAttribute("id","gra");
 		document.getElementById('MainMenu').appendChild(gra);
