@@ -31,8 +31,8 @@ function resizeDivs() {
 backgrounds();
 resizeDivs();
 
-button.onclick=()=>{
-		//console.log("LOOOL");
+function giereczka(){
+	//console.log("LOOOL");
 		document.body.style.backgroundImage = background;
 		//document.getElementById("backk").style.background = "url('SongBackground/PandaHighscore.jpg')";
 		document.getElementById("pudlo").style.display = "none";
@@ -65,5 +65,8 @@ button.onclick=()=>{
 				}
 		})
 		load('HighscoreSong2.js');
-		
+}
+
+button.onclick=()=>{
+		giereczka();
 }

@@ -48,9 +48,9 @@ div {
 }
 #pudlo{
 	width: 100%;
-	height: 80%;
+	height: 60%;
 	position: absolute;
-	margin-top:6%;
+	margin-top:3%;
 	display:inline;
 }
 
@@ -209,8 +209,8 @@ input[type=range]:focus::-ms-fill-upper {
 }
 #logoosu {
     position: relative;
-	width:500px;
-	height:500px;
+	width:550px;
+	height:550px;
     top: 0px;
     transition: transform .1s ease-out;
 	left: 0px;
@@ -220,15 +220,15 @@ input[type=range]:focus::-ms-fill-upper {
 }
 #logoosu2 {
     position: relative;
-	width:500px;
-	height:500px;
+	width:550px;
+	height:550px;
     top: 0px;
 	left: -150px;
 }
 #logoosu3 {
     position: relative;
-	width:500px;
-	height:500px;
+	width:550px;
+	height:550px;
     top: 0px;
 	left: -150px;
 	transition: transform .8s ease-in-out;
@@ -236,8 +236,8 @@ input[type=range]:focus::-ms-fill-upper {
 }
 #logoosu4 {
     position: relative;
-	width:500px;
-	height:500px;
+	width:550px;
+	height:550px;
     top: 0px;
 	left: 0px;
 }
@@ -247,4 +247,49 @@ input[type=range]:focus::-ms-fill-upper {
 	width: 6px;
     border-radius: 3px;
     background: teal;
- }
+}
+#menulogoo {
+    position: absolute;
+    top: 15px;
+	left: 0px;
+}
+#BUTTON1 {
+    position: absolute;
+    top: 100px;
+	left: 100px;
+	height: 87px; 
+	width: 423px;
+	display: none;
+	transition: transform 3s ease-in-out;
+	transform: translateX(340px);
+}
+#BUTTON2 {
+    position: absolute;
+    top: 200px;
+	left: 100px;
+	height: 87px; 
+	width: 365px;
+	display: none;
+	transition: transform 3s ease-in-out;
+	transform: translateX(410px);
+}
+#BUTTON3 {
+    position: absolute;
+    top: 300px;
+	left: 100px;
+	height: 87px; 
+	width: 365px;
+	display: none;
+	transition: transform 3s ease-in-out;
+	transform: translateX(410px);
+}
+#BUTTON4 {
+    position: absolute;
+    top: 400px;
+	left: 100px;
+	height: 87px; 
+	width: 423px;
+	display: none;
+	transition: transform 3s ease-in-out;
+	transform: translateX(340px);
+}
