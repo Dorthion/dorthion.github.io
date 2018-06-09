@@ -36,8 +36,8 @@ function giereczka(){
 		document.body.style.backgroundImage = background;
 		//document.getElementById("backk").style.background = "url('SongBackground/PandaHighscore.jpg')";
 		document.getElementById("pudlo").style.display = "none";
-		console.log(dl1);		
-		console.log(dl2);
+		//console.log(dl1);		
+		//console.log(dl2);
 		let licznik=0;
 		var startTime2 = Date.now();
 		var interval2 = setInterval(function() {

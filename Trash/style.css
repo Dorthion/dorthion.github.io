@@ -171,29 +171,177 @@ input[type=range]:focus::-ms-fill-upper {
 #index{
 	display:inline;
 }
-#gra img{
+/*#gra img{
 	witdh: 150px;
 	height: 150px;
-}
+}*/
 #n0{
 	position:absolute;
 	left:0px;
 	top:0px;
+	width:200px;
+	height:200px;
 }
 #n1{
 	position:absolute;
 	left:0px;
 	top:0px;
+	width:200px;
+	height:200px;
 }
 #n2{
 	position:absolute;
 	left:0px;
 	top:0px;
+	width:200px;
+	height:200px;
 }
 #n3{
 	position:absolute;
 	left:0px;
 	top:0px;
+	width:200px;
+	height:200px;
+}
+#n4{
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:200px;
+	height:200px;
+}
+#n5{
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:200px;
+	height:200px;
+}
+#n6{
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:200px;
+	height:200px;
+}
+#n7{
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:200px;
+	height:200px;
+}
+#apcircle0{
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:200px;
+	height:200px;
+}
+#apcircle1{
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:200px;
+	height:200px;
+}
+#apcircle2{
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:200px;
+	height:200px;
+}
+#apcircle3{
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:200px;
+	height:200px;
+}
+#apcircle4{
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:200px;
+	height:200px;
+}
+#apcircle5{
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:200px;
+	height:200px;
+}
+#apcircle6{
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:200px;
+	height:200px;
+}
+#apcircle7{
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:200px;
+	height:200px;
+}
+#o0{
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:200px;
+	height:200px;
+}
+#o1{
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:200px;
+	height:200px;
+}
+#o2{
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:200px;
+	height:200px;
+}
+#o3{
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:200px;
+	height:200px;
+}
+#o4{
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:200px;
+	height:200px;
+}
+#o5{
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:200px;
+	height:200px;
+}
+#o6{
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:200px;
+	height:200px;
+}
+#o7{
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:200px;
+	height:200px;
 }
 .wgracz{
 	width:5%;

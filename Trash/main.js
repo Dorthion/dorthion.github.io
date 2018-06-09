@@ -141,7 +141,7 @@ addDiv();
 	playy.addEventListener("mousedown", function(){
 		load('HighscoreCircles.js');
 		load('HighscoreSong.js');
-		giereczka();
+		//giereczka();
 	});
 	
 	exit.addEventListener("mousedown", function(){
