@@ -10,8 +10,10 @@
 		let celnosc=100.00;
 		let hp=100;
 		let cyfra=1;
-		let nrkolka=0;
+		let nrkolka=1;
 		let nrkolka2=0;
+		let wcisniecie=0;
+		let g=0;
 		//var apcircle = new Image ('Cookiezi/approachcircle.png');
 		var gra = document.createElement('div');
 		gra.setAttribute("id","gra");
@@ -25,34 +27,122 @@
 				console.log(elapsedTime3);
 				console.log("woot");
 				let reszta=licznik3%8;
-				gra.innerHTML += '<img id="apcircle'+reszta+'" src="Cookiezi/approachcircle.png"/>';
+				//gra.innerHTML += '<img id="apcircle'+reszta+'" src="Cookiezi/approachcircle.png"/>';
 				
 				//gra.innerHTML += '<img id="n'+reszta+'" src="Cookiezi/hitcircle3.png" />';
-				gra.innerHTML += '<img id="o'+reszta+'" src="Cookiezi/hitcircleoverlay.png" />';
+				//gra.innerHTML += '<img id="o'+reszta+'" src="Cookiezi/hitcircleoverlay.png" />';
+				if(g<=7){
+				gra.innerHTML += '<img id="apcircle'+cyfra+'" src="Cookiezi/approachcircle.png"/>';
+				gra.innerHTML += '<img id="o'+cyfra+'" src="Cookiezi/hitcircleoverlay.png" />';
 				gra.innerHTML += '<img id="c'+cyfra+'" src="Cookiezi/default-'+cyfra+'.png" />';
-				nrkolka=nrkolka+1;
+				g++;
+				}
+				nrkolka2=nrkolka2+1;
+				if(g>7){
+					document.getElementById("apcircle"+cyfra).style.display = "inline";
+					document.getElementById("o"+cyfra).style.display = "inline";
+					document.getElementById("c"+cyfra).style.display = "inline";
+				}
+				
+				var usuwanie = document.getElementById('c'+nrkolka);
+				/*var usuwanie2 = document.getElementById('o'+nrkolka);
+				var usuwanie3 = document.getElementById('apcircle'+nrkolka);*/
+				usuwanie.addEventListener("mousedown", function(){  //BŁĄD
+					/*gra.removeChild(usuwanie);
+					gra.removeChild(usuwanie2);
+					gra.removeChild(usuwanie3);*/
+					document.getElementById('c'+nrkolka).style.display = "none"; //BŁĄD
+					document.getElementById('o'+nrkolka).style.display = "none";
+					document.getElementById('apcircle'+nrkolka).style.display = "none";
+					nrkolka=nrkolka+1;
+					if(nrkolka==8)
+					{
+						nrkolka=1;
+					}
+					wcisniecie=wcisniecie+1;
+				});
+				
+				
+				
+				
 				//TIMER
 				var Aptiming = Date.now();
 				var Aptimer = setInterval(function() {
 					let Apcirtimer = Date.now() - Aptiming;
+					if(nrkolka2>wcisniecie){
+						var usuwanie4 = document.getElementById('c'+wcisniecie);
+						/*var usuwanie5 = document.getElementById('o'+wcisniecie);
+						var usuwanie6 = document.getElementById('apcircle'+wcisniecie);*/
+						usuwanie4.addEventListener("mousedown", function(){
+							document.getElementById('c'+nrkolka).style.display = "none"; //BŁĄD
+							document.getElementById('o'+nrkolka).style.display = "none";
+							document.getElementById('apcircle'+nrkolka).style.display = "none";
+							//nrkolka=nrkolka+1;
+							wcisniecie=wcisniecie+1;
+						});
+					}
+				}, 1000);
 					//document.getElementById("timer").innerHTML = (elapsedTime / 1);
-				}, 1);
 				
-					var usuwanie = document.getElementById('c'+cyfra);
-					var usuwanie2 = document.getElementById('o'+reszta);
-					var usuwanie3 = document.getElementById('apcircle'+reszta);
+				
+					/*var usuwanie = document.getElementById('c'+nrkolka);
+					var usuwanie2 = document.getElementById('o'+nrkolka);
+					var usuwanie3 = document.getElementById('apcircle'+nrkolka);
 					usuwanie.addEventListener("mousedown", function(){
 						gra.removeChild(usuwanie);
 						gra.removeChild(usuwanie2);
 						gra.removeChild(usuwanie3);
+						nrkolka=nrkolka+1;
 					});
-				
-				
+					
+					if(nrkolka==9)
+					{
+						nrkolka=1;
+						console.log("zmiaanaaaa");
+					}*/
+					/*if(licznik3>4){
+					if(cyfra==0){
+						g=8;
+					}
+					if(cyfra==1){
+						g=0;
+					}
+					var usuwanie4 = document.getElementById('c'+g);
+					var usuwanie5 = document.getElementById('o'+g);
+					var usuwanie6 = document.getElementById('apcircle'+g);
+					usuwanie4.addEventListener("mousedown", function(){
+						gra.removeChild(usuwanie4);
+						gra.removeChild(usuwanie5);
+						gra.removeChild(usuwanie6);
+						nrkolka=nrkolka+1;
+					});
+					}
+					if(licznik3>9){
+					if(cyfra==0){
+						g=7;
+					}
+					if(cyfra==1){
+						g=8;
+					}
+					if(cyfra==2){
+						g=0;
+					}
+					var usuwanie7 = document.getElementById('c'+g);
+					var usuwanie8 = document.getElementById('o'+g);
+					var usuwanie9 = document.getElementById('apcircle'+g);
+					usuwanie7.addEventListener("mousedown", function(){
+						gra.removeChild(usuwanie7);
+						gra.removeChild(usuwanie8);
+						gra.removeChild(usuwanie9);
+						nrkolka=nrkolka+1;
+					});
+			}*/
 				function cirlees(x_pos, y_pos) {
-					//console.log("KOLECZKO: "+reszta);
-					var ciircle = document.getElementById('apcircle'+reszta);
+					console.log("KOLECZKO: "+cyfra);
+					console.log("NUMEEER KOLECZKA: "+nrkolka);
+					var ciircle = document.getElementById('apcircle'+cyfra);
 					//var clickcircles = document.getElementById('n'+reszta);
-					var overcircles = document.getElementById('o'+reszta);
+					var overcircles = document.getElementById('o'+cyfra);
 					var numerek = document.getElementById('c'+cyfra);
 					//clickcircles.style.left = x_pos+5+'px';
 					//clickcircles.style.top = y_pos+5+'px';
@@ -62,13 +152,22 @@
 					overcircles.style.top = y_pos+'px';
 					numerek.style.left = x_pos+25+'px';
 					numerek.style.top = y_pos+25+'px';
+					/*if(nrkolka==nrkolka2-3)
+					{
+						var usuwanie = document.getElementById('c'+cyfra);
+						var usuwanie2 = document.getElementById('o'+reszta);
+						var usuwanie3 = document.getElementById('apcircle'+reszta);
+						gra.removeChild(usuwanie);
+						gra.removeChild(usuwanie2);
+						gra.removeChild(usuwanie3);
+					}*/
 					//console.log("CYFRAAAAAA: "+cyfra);
-					if(licznik3>9)
+					/*if(licznik3>9)
 						{
 							switch(reszta){
 								case 0: {//1
 								console.log("1");
-								//if(nrkolka!=1){
+								if(nrkolka!=0){
 									//var image1 = document.getElementById('n'+4);
 									var image1_1 = document.getElementById('o'+4);
 									var image1_2 = document.getElementById('apcircle'+4);
@@ -77,12 +176,12 @@
 									gra.removeChild(image1_1);
 									gra.removeChild(image1_2);
 									gra.removeChild(image1_3);
+									}
 									break;
-								//}
 								}
 								case 1: {//2
 								console.log("2");
-								//if(nrkolka!=4){
+								if(nrkolka!=3){
 									//var image2 = document.getElementById('n'+5);
 									var image2_1 = document.getElementById('o'+5);
 									var image2_2 = document.getElementById('apcircle'+5);
@@ -91,12 +190,12 @@
 									gra.removeChild(image2_1);
 									gra.removeChild(image2_2);
 									gra.removeChild(image2_3);
+								}
 									break;
-								//}
 								}
 								case 2: {//3
 								console.log("3");
-								//if(nrkolka!=7){
+								if(nrkolka!=6){
 									//var image3 = document.getElementById('n'+6);
 									var image3_1 = document.getElementById('o'+6);
 									var image3_2 = document.getElementById('apcircle'+6);
@@ -105,12 +204,12 @@
 									gra.removeChild(image3_1);
 									gra.removeChild(image3_2);
 									gra.removeChild(image3_3);
+								}
 									break;
-								//}
 								}
 								case 3: {//4
 								console.log("4");
-								//if(nrkolka!=4){
+								if(nrkolka!=3){
 									//var image4 = document.getElementById('n'+7);
 									var image4_1 = document.getElementById('o'+7);
 									var image4_2 = document.getElementById('apcircle'+7);
@@ -119,12 +218,13 @@
 									gra.removeChild(image4_1);
 									gra.removeChild(image4_2);
 									gra.removeChild(image4_3);
+								}
 									break;
-								//}
 								}
 								case 4: {//5
 								console.log("5");
-								//if(nrkolka!=5){
+								//if(nr
+								if(nrkolka!=4){
 									//var image5 = document.getElementById('n0');
 									var image5_1 = document.getElementById('o0');
 									var image5_2 = document.getElementById('apcircle0');
@@ -133,12 +233,12 @@
 									gra.removeChild(image5_1);
 									gra.removeChild(image5_2);
 									gra.removeChild(image5_3);
+								}
 									break;
-								//}
 								}
 								case 5: {//6
 								console.log("6");
-								//if(nrkolka!=8){
+								if(nrkolka!=7){
 									//var image6 = document.getElementById('n'+1);
 									var image6_1 = document.getElementById('o'+1);
 									var image6_2 = document.getElementById('apcircle'+1);
@@ -147,12 +247,12 @@
 									gra.removeChild(image6_1);
 									gra.removeChild(image6_2);
 									gra.removeChild(image6_3);
+								}
 									break;
-								//}
 								}
 								case 6: {//7
 								console.log("7");
-								if(nrkolka!=3){
+								if(nrkolka!=2){
 									//var image7 = document.getElementById('n'+2);
 									var image7_1 = document.getElementById('o'+2);
 									var image7_2 = document.getElementById('apcircle'+2);
@@ -161,12 +261,12 @@
 									gra.removeChild(image7_1);
 									gra.removeChild(image7_2);
 									gra.removeChild(image7_3);
-									break;
 								}
+									break;
 								}
 								case 7: {//8
 								console.log("8");
-								//if(nrkolka!=6){
+								if(nrkolka!=5){
 									//var image8 = document.getElementById('n'+3);
 									var image8_1 = document.getElementById('o'+3);
 									var image8_2 = document.getElementById('apcircle'+3);
@@ -175,22 +275,23 @@
 									gra.removeChild(image8_1);
 									gra.removeChild(image8_2);
 									gra.removeChild(image8_3);
-									break;
-								//}
 								}
-							}
-						}
-					}
+									break;
+								}
+							
+							
+						}*/
+						
+				}
 				cirlees(song[0+licznik3],song[1+licznik3]);
 				if(cyfra==8)
 				{
 					cyfra=0;
 				}
-				if(nrkolka==8)
-				{
-					nrkolka=0;
-				}
+				
+				
 				cyfra=cyfra+1;
+				//nrkolka2=nrkolka2+1;
 				licznik3=licznik3+3;
 			}
 }, 1);

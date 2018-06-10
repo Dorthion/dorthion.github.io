@@ -64,7 +64,7 @@ function giereczka(){
 					audio1.pause();
 				}
 		})
-		load('HighscoreSong2.js');
+		load('HighscoreSong3.js');
 }
 
 button.onclick=()=>{
