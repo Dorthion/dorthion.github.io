@@ -28,30 +28,35 @@ addDiv();
 //var audio3 = new Audio('Teo.mp3');
 
 //Logo i jego ustawienia przycisków
+	let k=0;
+	for(k=0; k<180; k++){
+		let bary = document.createElement('div');
+		bary.setAttribute("class","bar");
+		document.getElementsByClassName('bars')[0].appendChild(bary);
+	}
 	
 	let liczniklogo = 1;
 	var menuprzyciski1 = document.createElement('div');  //PLAY
 	menuprzyciski1.setAttribute("id","BUTTON"+liczniklogo);
-	document.getElementById("logoosu").appendChild(menuprzyciski1);
+	document.getElementsByClassName('bars')[0].appendChild(menuprzyciski1);
 	liczniklogo++;
 	var menuprzyciski2 = document.createElement('div');  //EDIT
 	menuprzyciski2.setAttribute("id","BUTTON"+liczniklogo);
-	document.getElementById("logoosu").appendChild(menuprzyciski2);
+	document.getElementsByClassName('bars')[0].appendChild(menuprzyciski2);
 	liczniklogo++;
 	var menuprzyciski3 = document.createElement('div');  //OPTIONS
 	menuprzyciski3.setAttribute("id","BUTTON"+liczniklogo);
-	document.getElementById("logoosu").appendChild(menuprzyciski3);
+	document.getElementsByClassName('bars')[0].appendChild(menuprzyciski3);
 	liczniklogo++;
 	var menuprzyciski4 = document.createElement('div'); //EXIT
 	menuprzyciski4.setAttribute("id","BUTTON"+liczniklogo);
-	document.getElementById("logoosu").appendChild(menuprzyciski4);
+	document.getElementsByClassName('bars')[0].appendChild(menuprzyciski4);
 	liczniklogo = 1;
-	var menulogoo = document.createElement('div'); //LOGO
+	
+	let menulogoo = document.createElement('div'); //LOGO
 	menulogoo.setAttribute("id","menulogoo");
-	document.getElementById("logoosu").appendChild(menulogoo);
-	document.getElementById("menulogoo2").style.display="inline";
-	
-	
+	document.getElementsByClassName('bars')[0].appendChild(menulogoo);
+	load2('style5.css');
 	//----------------------------------------------------------------------
 	let playy = new Image(423,87);    //PLAY
 	playy.src = 'Icons/playy.png';
@@ -71,7 +76,7 @@ addDiv();
 	let mainlogo = new Image(550,550);    //OSU!JS LOGO
 	mainlogo.src = 'MenuBackground/OsuWow.png';
 	document.getElementById("menulogoo").appendChild(mainlogo);
-	
+	//var mainlogo=document.getElementById("logs");
 	
 	/*button.addEventListener("mouseover", function(){
 		this.classList.add('mouse-over');
