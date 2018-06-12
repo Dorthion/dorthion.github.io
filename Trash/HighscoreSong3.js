@@ -35,6 +35,7 @@
 				gra.innerHTML += '<img id="apcircle'+cyfra+'" src="Cookiezi/approachcircle.png"/>';
 				gra.innerHTML += '<img id="o'+cyfra+'" src="Cookiezi/hitcircleoverlay.png" />';
 				gra.innerHTML += '<img id="c'+cyfra+'" src="Cookiezi/default-'+cyfra+'.png" />';
+				
 				g++;
 				}
 				nrkolka2=nrkolka2+1;
@@ -162,126 +163,6 @@
 						gra.removeChild(usuwanie3);
 					}*/
 					//console.log("CYFRAAAAAA: "+cyfra);
-					/*if(licznik3>9)
-						{
-							switch(reszta){
-								case 0: {//1
-								console.log("1");
-								if(nrkolka!=0){
-									//var image1 = document.getElementById('n'+4);
-									var image1_1 = document.getElementById('o'+4);
-									var image1_2 = document.getElementById('apcircle'+4);
-									var image1_3 = document.getElementById('c'+5);
-									//gra.removeChild(image1);
-									gra.removeChild(image1_1);
-									gra.removeChild(image1_2);
-									gra.removeChild(image1_3);
-									}
-									break;
-								}
-								case 1: {//2
-								console.log("2");
-								if(nrkolka!=3){
-									//var image2 = document.getElementById('n'+5);
-									var image2_1 = document.getElementById('o'+5);
-									var image2_2 = document.getElementById('apcircle'+5);
-									var image2_3 = document.getElementById('c'+8);
-									//gra.removeChild(image2);
-									gra.removeChild(image2_1);
-									gra.removeChild(image2_2);
-									gra.removeChild(image2_3);
-								}
-									break;
-								}
-								case 2: {//3
-								console.log("3");
-								if(nrkolka!=6){
-									//var image3 = document.getElementById('n'+6);
-									var image3_1 = document.getElementById('o'+6);
-									var image3_2 = document.getElementById('apcircle'+6);
-									var image3_3 = document.getElementById('c'+3);
-									//gra.removeChild(image3);
-									gra.removeChild(image3_1);
-									gra.removeChild(image3_2);
-									gra.removeChild(image3_3);
-								}
-									break;
-								}
-								case 3: {//4
-								console.log("4");
-								if(nrkolka!=3){
-									//var image4 = document.getElementById('n'+7);
-									var image4_1 = document.getElementById('o'+7);
-									var image4_2 = document.getElementById('apcircle'+7);
-									var image4_3 = document.getElementById('c'+6);
-									//gra.removeChild(image4);
-									gra.removeChild(image4_1);
-									gra.removeChild(image4_2);
-									gra.removeChild(image4_3);
-								}
-									break;
-								}
-								case 4: {//5
-								console.log("5");
-								//if(nr
-								if(nrkolka!=4){
-									//var image5 = document.getElementById('n0');
-									var image5_1 = document.getElementById('o0');
-									var image5_2 = document.getElementById('apcircle0');
-									var image5_3 = document.getElementById('c'+1);
-									//gra.removeChild(image5);
-									gra.removeChild(image5_1);
-									gra.removeChild(image5_2);
-									gra.removeChild(image5_3);
-								}
-									break;
-								}
-								case 5: {//6
-								console.log("6");
-								if(nrkolka!=7){
-									//var image6 = document.getElementById('n'+1);
-									var image6_1 = document.getElementById('o'+1);
-									var image6_2 = document.getElementById('apcircle'+1);
-									var image6_3 = document.getElementById('c'+4);
-									//gra.removeChild(image6);
-									gra.removeChild(image6_1);
-									gra.removeChild(image6_2);
-									gra.removeChild(image6_3);
-								}
-									break;
-								}
-								case 6: {//7
-								console.log("7");
-								if(nrkolka!=2){
-									//var image7 = document.getElementById('n'+2);
-									var image7_1 = document.getElementById('o'+2);
-									var image7_2 = document.getElementById('apcircle'+2);
-									var image7_3 = document.getElementById('c'+7);
-									//gra.removeChild(image7);
-									gra.removeChild(image7_1);
-									gra.removeChild(image7_2);
-									gra.removeChild(image7_3);
-								}
-									break;
-								}
-								case 7: {//8
-								console.log("8");
-								if(nrkolka!=5){
-									//var image8 = document.getElementById('n'+3);
-									var image8_1 = document.getElementById('o'+3);
-									var image8_2 = document.getElementById('apcircle'+3);
-									var image8_3 = document.getElementById('c'+2);
-									//gra.removeChild(image8);
-									gra.removeChild(image8_1);
-									gra.removeChild(image8_2);
-									gra.removeChild(image8_3);
-								}
-									break;
-								}
-							
-							
-						}*/
-						
 				}
 				cirlees(song[0+licznik3],song[1+licznik3]);
 				if(cyfra==8)

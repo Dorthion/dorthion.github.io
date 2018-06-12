@@ -2,6 +2,8 @@
 function random(min,max){
 	return Math.random()*(max-min)+min;
 }
+
+//load('circulation.js');
 //Losowanie tła
 var menuimage = "url('MenuBackground/Background"+parseInt(random(1,17))+".jpg'";
 document.getElementById("backk").style.background = menuimage;
@@ -47,6 +49,9 @@ addDiv();
 	var menulogoo = document.createElement('div'); //LOGO
 	menulogoo.setAttribute("id","menulogoo");
 	document.getElementById("logoosu").appendChild(menulogoo);
+	document.getElementById("menulogoo2").style.display="inline";
+	
+	
 	//----------------------------------------------------------------------
 	let playy = new Image(423,87);    //PLAY
 	playy.src = 'Icons/playy.png';
