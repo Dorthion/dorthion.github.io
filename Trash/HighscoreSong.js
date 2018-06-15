@@ -54,7 +54,7 @@ function giereczka(){
 			}
 		}, 1);
 		
-		let audio1 = new Audio('Highscore.mp3');
+		let audio1 = new Audio('empe.mp3');
 		audio1.play();
 		
 		document.addEventListener('keydown', (event) => {

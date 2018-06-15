@@ -36,19 +36,19 @@ addDiv();
 	}
 	
 	let liczniklogo = 1;
-	var menuprzyciski1 = document.createElement('div');  //PLAY
+	let menuprzyciski1 = document.createElement('div');  //PLAY
 	menuprzyciski1.setAttribute("id","BUTTON"+liczniklogo);
 	document.getElementsByClassName('bars')[0].appendChild(menuprzyciski1);
 	liczniklogo++;
-	var menuprzyciski2 = document.createElement('div');  //EDIT
+	let menuprzyciski2 = document.createElement('div');  //EDIT
 	menuprzyciski2.setAttribute("id","BUTTON"+liczniklogo);
 	document.getElementsByClassName('bars')[0].appendChild(menuprzyciski2);
 	liczniklogo++;
-	var menuprzyciski3 = document.createElement('div');  //OPTIONS
+	let menuprzyciski3 = document.createElement('div');  //OPTIONS
 	menuprzyciski3.setAttribute("id","BUTTON"+liczniklogo);
 	document.getElementsByClassName('bars')[0].appendChild(menuprzyciski3);
 	liczniklogo++;
-	var menuprzyciski4 = document.createElement('div'); //EXIT
+	let menuprzyciski4 = document.createElement('div'); //EXIT
 	menuprzyciski4.setAttribute("id","BUTTON"+liczniklogo);
 	document.getElementsByClassName('bars')[0].appendChild(menuprzyciski4);
 	liczniklogo = 1;
@@ -136,9 +136,6 @@ addDiv();
 		{
 			czyruszony=0;
 		}
-	});
-
-	mainlogo.addEventListener("mouseup", function(){
 		czyruszony++;
 		document.getElementById("logoosu").setAttribute("id", "logoosu2");
 		document.getElementById("BUTTON1").style.display = "inline";
@@ -147,9 +144,13 @@ addDiv();
 		document.getElementById("BUTTON4").style.display = "inline";
 		console.log("I bardzo dobrze");
 	});
+
+	mainlogo.addEventListener("mouseup", function(){
+		
+	});
 	
 	playy.addEventListener("mousedown", function(){
-		load('HighscoreCircles.js');
+		load('Emp.js');
 		load('HighscoreSong.js');
 		//giereczka();
 	});
