@@ -176,262 +176,6 @@ input[type=range]:focus::-ms-fill-upper {
 	witdh: 150px;
 	height: 150px;
 }*/
-#n0{
-	position:absolute;
-	left:0px;
-	top:0px;
-	width:140px;
-	height:140px;
-	display: inline;
-}
-#n1{
-	position:absolute;
-	left:0px;
-	top:0px;
-	width:140px;
-	height:140px;
-	display: inline;
-}
-#n2{
-	position:absolute;
-	left:0px;
-	top:0px;
-	width:140px;
-	height:140px;
-	display: inline;
-}
-#n3{
-	position:absolute;
-	left:0px;
-	top:0px;
-	width:140px;
-	height:140px;
-	display: inline;
-}
-#n4{
-	position:absolute;
-	left:0px;
-	top:0px;
-	width:140px;
-	height:140px;
-	display: inline;
-}
-#n5{
-	position:absolute;
-	left:0px;
-	top:0px;
-	width:140px;
-	height:140px;
-	display: inline;
-}
-#n6{
-	position:absolute;
-	left:0px;
-	top:0px;
-	width:140px;
-	height:140px;
-	display: inline;
-}
-#n7{
-	position:absolute;
-	left:0px;
-	top:0px;
-	width:140px;
-	height:140px;
-	display: inline;
-}
-#apcircle8{
-	position:absolute;
-	left:0px;
-	top:0px;
-	width:300px;
-	height:300px;
-	display: inline;
-}
-#apcircle1{
-	position:absolute;
-	left:0px;
-	top:0px;
-	width:300px;
-	height:300px;
-	display: inline;
-}
-#apcircle2{
-	position:absolute;
-	left:0px;
-	top:0px;
-	width:300px;
-	height:300px;
-	display: inline;
-}
-#apcircle3{
-	position:absolute;
-	left:0px;
-	top:0px;
-	width:300px;
-	height:300px;
-	display: inline;
-}
-#apcircle4{
-	position:absolute;
-	left:0px;
-	top:0px;
-	width:300px;
-	height:300px;
-	display: inline;
-}
-#apcircle5{
-	position:absolute;
-	left:0px;
-	top:0px;
-	width:300px;
-	height:300px;
-	display: inline;
-}
-#apcircle6{
-	position:absolute;
-	left:0px;
-	top:0px;
-	width:300px;
-	height:300px;
-	display: inline;
-}
-#apcircle7{
-	position:absolute;
-	left:0px;
-	top:0px;
-	width:300px;
-	height:300px;
-	display: inline;
-}
-#o8{
-	position:absolute;
-	left:0px;
-	top:0px;
-	width:150px;
-	height:150px;
-	display: inline;
-}
-#o1{
-	position:absolute;
-	left:0px;
-	top:0px;
-	width:150px;
-	height:150px;
-	display: inline;
-}
-#o2{
-	position:absolute;
-	left:0px;
-	top:0px;
-	width:150px;
-	height:150px;
-	display: inline;
-}
-#o3{
-	position:absolute;
-	left:0px;
-	top:0px;
-	width:150px;
-	height:150px;
-	display: inline;
-}
-#o4{
-	position:absolute;
-	left:0px;
-	top:0px;
-	width:150px;
-	height:150px;
-	display: inline;
-}
-#o5{
-	position:absolute;
-	left:0px;
-	top:0px;
-	width:150px;
-	height:150px;
-	display: inline;
-}
-#o6{
-	position:absolute;
-	left:0px;
-	top:0px;
-	width:150px;
-	height:150px;
-	display: inline;
-}
-#o7{
-	position:absolute;
-	left:0px;
-	top:0px;
-	width:150px;
-	height:150px;
-	display: inline;
-}
-#c1{
-	position:absolute;
-	left:0px;
-	top:0px;
-	width:100px;
-	height:100px;
-	display: inline;
-}
-#c2{
-	position:absolute;
-	left:0px;
-	top:0px;
-	width:100px;
-	height:100px;
-	display: inline;
-}
-#c3{
-	position:absolute;
-	left:0px;
-	top:0px;
-	width:100px;
-	height:100px;
-	display: inline;
-}
-#c4{
-	position:absolute;
-	left:0px;
-	top:0px;
-	width:100px;
-	height:100px;
-	display: inline;
-}
-#c5{
-	position:absolute;
-	left:0px;
-	top:0px;
-	width:100px;
-	height:100px;
-	display: inline;
-}
-#c6{
-	position:absolute;
-	left:0px;
-	top:0px;
-	width:100px;
-	height:100px;
-	display: inline;
-}
-#c7{
-	position:absolute;
-	left:0px;
-	top:0px;
-	width:100px;
-	height:100px;
-	display: inline;
-}
-#c8{
-	position:absolute;
-	left:0px;
-	top:0px;
-	width:100px;
-	height:100px;
-	display: inline;
-}
 .wgracz{
 	width:5%;
 	height: 10%;
@@ -556,4 +300,57 @@ input[type=range]:focus::-ms-fill-upper {
 
 #bars{
 	display: none;
+}
+#gra{
+	width:1000px;
+	height: 600px;
+	margin-top:50px;
+	margin-left:325px;
+	position: absolute;
+}
+#llicznikcombo{
+	color:white;
+	font-family: 'Exo 2', sans-serif;
+	font-size:45px;
+	left:-320px;
+	bottom: -140px;
+	width:200px;
+	height:200px;
+	position: absolute;
+}
+#llicznikpkt{
+	color:white;
+	font-family: 'Exo 2', sans-serif;
+	font-size:45px;
+	right: 100px;
+	top: -50px;
+	width:200px;
+	height:200px;
+	position: absolute;
+}
+#llicznikhp{
+	color:black;
+	position: absolute;
+	width:320px;
+	height:20px;
+	left:-300px;
+	top: -35px;
+	background: orangered;
+}
+#llicznikhp2{
+	position: absolute;
+    top: -50px;
+	left: -340px;
+	height: 50px; 
+	width: 400px;
+}
+#llicznikacc{
+	color:white;
+	font-family: 'Exo 2', sans-serif;
+	font-size:30px;
+	right: -100px;
+	top: 0px;
+	width:300px;
+	height:200px;
+	position: absolute;
 }

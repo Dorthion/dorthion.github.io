@@ -3,29 +3,27 @@ function random(min,max){
 	return Math.random()*(max-min)+min;
 }
 
-//load('circulation.js');
+function menu(){
 //Losowanie tła
-var menuimage = "url('MenuBackground/Background"+parseInt(random(1,17))+".jpg'";
+let menuimage = "url('MenuBackground/Background"+parseInt(random(1,17))+".jpg'";
 document.getElementById("backk").style.background = menuimage;
+
 //Obliczanie wielkości przeglądarki
-var dlug1=window.screen.availHeight;
-var dlug2=window.screen.availWidth;
+let dlug1=window.screen.availHeight;
+let dlug2=window.screen.availWidth;
 document.getElementById("backk").style.backgroundSize = dlug2+"px "+dlug1+"px";
+
 //Index dolny
 function addDiv() {
-	var DownMenu = document.getElementById("dol");
-	var authors = document.createElement('div');
-	var authorst = document.createElement('p');	
-	var textnode ="Game idea and resources from Osu! by Ppy";
-	var lol="Remake by NightmareYandere";
+	let DownMenu = document.getElementById("dol");
+	let authors = document.createElement('div');
+	let authorst = document.createElement('p');	
+	let textnode ="Game idea and resources from Osu! by Ppy";
+	let lol="Remake by NightmareYandere";
 	authorst.innerHTML=textnode+"<br>"+lol;
 	DownMenu.appendChild(authorst);
 }
 addDiv();
-
-//Preload music - pewnie do usunięcia
-//var audio2 = new Audio('Rumors.mp3');
-//var audio3 = new Audio('Teo.mp3');
 
 //Logo i jego ustawienia przycisków
 	let k=0;
@@ -76,18 +74,13 @@ addDiv();
 	let mainlogo = new Image(550,550);    //OSU!JS LOGO
 	mainlogo.src = 'MenuBackground/OsuWow.png';
 	document.getElementById("menulogoo").appendChild(mainlogo);
-	//var mainlogo=document.getElementById("logs");
-	
-	/*button.addEventListener("mouseover", function(){
-		this.classList.add('mouse-over');
-	});*/
 	
 	//TIMER
-		var startTime = Date.now();
-		var interval = setInterval(function() {
-		var elapsedTime = Date.now() - startTime;
+	/*	let startTime = Date.now();
+		let interval = setInterval(function() {
+		let elapsedTime = Date.now() - startTime;
 		document.getElementById("timer").innerHTML = (elapsedTime / 1);
-	}, 1);
+	}, 1);*/
 	
 	let czyruszony = 0;
 	
@@ -95,10 +88,10 @@ addDiv();
 	function auto(czyruszony){
 		if(parseInt(czyruszony)==1){
 		czyruszony="-5000";
-		var logoTime = Date.now();
-		var logointerval = setInterval(function() {
+		let logoTime = Date.now();
+		let logointerval = setInterval(function() {
 			let elapsedTimeXD = Date.now() - logoTime;
-			console.log("tak");
+			//console.log("tak");
 			if(elapsedTimeXD>5000 && elapsedTimeXD<6000){
 				czyruszony=0;
 				document.getElementById("logoosu2").setAttribute("id", "logoosu3");
@@ -152,6 +145,7 @@ addDiv();
 	playy.addEventListener("mousedown", function(){
 		load('Emp.js');
 		load('HighscoreSong.js');
+		//clearInterval(logointerval);
 		//giereczka();
 	});
 	
@@ -161,30 +155,5 @@ addDiv();
 	//Wczytywanie dodatków
 	load('trail.js');
 	load('statgracza.js');
-	
-/*
-//REMEMBER TO DELETE THIS LATER
-document.addEventListener('keydown', (event) => {
-  const keyName = event.key;
-  //alert('keydown event\n\n' + 'key: ' + keyName);
-  switch (keyName){
-  case 's':
-	{	
-		audio2.pause();
-		audio3.pause();
-		break;
-	}
-  case 'd':
-	{
-		audio3.pause();
-		audio2.play();
-		break;
-	}
-	case 'w': 
-	{
-		audio2.pause();
-		audio3.play();
-		break;
-	}
-  }
-});*/
+}
+menu();

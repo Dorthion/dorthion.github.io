@@ -15,7 +15,7 @@
 		let wcisniecie=0;
 		let g=0;
 //Plansza + wczytanie kółek
-		let gra = document.createElement('div');
+		
 		gra.setAttribute("id","gra");
 		document.getElementById('MainMenu').appendChild(gra);
 		let k1 = document.createElement('div');
@@ -42,20 +42,41 @@
 		let k8 = document.createElement('div');
 		k8.setAttribute("id","k8");
 		document.getElementById('gra').appendChild(k8);
+		
+		//Licznik combo
+		let llicznikcombo = document.createElement('p');
+		llicznikcombo.setAttribute("id","llicznikcombo");		
+		let textnode2 =combo+"x";
+		llicznikcombo.innerHTML=textnode2;
+		gra.appendChild(llicznikcombo);
+		
+		//Licznik pkt
+		let llicznikpkt = document.createElement('p');	
+		llicznikpkt.setAttribute("id","llicznikpkt");	
+		let textnode3 =points;
+		llicznikpkt.innerHTML=textnode3;
+		gra.appendChild(llicznikpkt);
+		
+		//Licznik hp
+		let llicznikhp = document.createElement('progress');
+		llicznikhp.setAttribute("id","llicznikhp");
+		llicznikhp.setAttribute("value","100");
+		llicznikhp.setAttribute("max","100");
+		gra.appendChild(llicznikhp);
+		
+		//Licznik pkt
+		let llicznikacc = document.createElement('p');	
+		llicznikacc.setAttribute("id","llicznikacc");	
+		let textnode4 ="Acc: "+celnosc+"%";
+		llicznikacc.innerHTML=textnode4;
+		gra.appendChild(llicznikacc);
 //Gra
-		var startTime3 = Date.now();
-		var interval3 = setInterval(function() {
-			var elapsedTime3 = Date.now() - startTime3;
+		let startTime3 = Date.now();
+		let interval3 = setInterval(function() {
+			let elapsedTime3 = Date.now() - startTime3;
 			if(parseInt(song[2+licznik3])<elapsedTime3)
 			{
-				console.log(song[2+licznik3]);
-				console.log(elapsedTime3);
-				console.log("woot");
 				let reszta=licznik3%8;
-				//gra.innerHTML += '<img id="apcircle'+reszta+'" src="Cookiezi/approachcircle.png"/>';
-				
-				//gra.innerHTML += '<img id="n'+reszta+'" src="Cookiezi/hitcircle3.png" />';
-				//gra.innerHTML += '<img id="o'+reszta+'" src="Cookiezi/hitcircleoverlay.png" />';
 				if(g<=7){
 					switch(g){
 						case 0:{
@@ -116,48 +137,12 @@
 					document.getElementById("c"+cyfra).style.display = "inline";
 				}
 				
-				//var usuwanie = document.getElementById('c'+nrkolka);
-				/*var usuwanie2 = document.getElementById('o'+nrkolka);
-				var usuwanie3 = document.getElementById('apcircle'+nrkolka);*/
-				/*usuwanie.addEventListener("mousedown", function(){  //BŁĄD
-					document.getElementById('c'+nrkolka).style.display = "none"; //BŁĄD
-					document.getElementById('o'+nrkolka).style.display = "none";
-					document.getElementById('apcircle'+nrkolka).style.display = "none";
-					nrkolka=nrkolka+1;
-					if(nrkolka==8)
-					{
-						nrkolka=1;
-					}
-					wcisniecie=wcisniecie+1;
-				});*/
-				
-				
-				
-				
-				//TIMER
-				/*var Aptiming = Date.now();
-				var Aptimer = setInterval(function() {
-					let Apcirtimer = Date.now() - Aptiming;
-					if(nrkolka2>wcisniecie){
-						var usuwanie4 = document.getElementById('c'+wcisniecie);
-						/*var usuwanie5 = document.getElementById('o'+wcisniecie);
-						var usuwanie6 = document.getElementById('apcircle'+wcisniecie);
-						usuwanie4.addEventListener("mousedown", function(){
-							document.getElementById('c'+nrkolka).style.display = "none"; //BŁĄD
-							document.getElementById('o'+nrkolka).style.display = "none";
-							document.getElementById('apcircle'+nrkolka).style.display = "none";
-							//nrkolka=nrkolka+1;
-							wcisniecie=wcisniecie+1;
-						});
-					}
-				}, 1000);*/
-					
 				function cirlees(x_pos, y_pos) {
 					console.log("KOLECZKO: "+cyfra);
 					console.log("NUMEEER KOLECZKA: "+nrkolka);
-					var ciircle = document.getElementById('apcircle'+cyfra);
-					var overcircles = document.getElementById('o'+cyfra);
-					var numerek = document.getElementById('c'+cyfra);
+					let ciircle = document.getElementById('apcircle'+cyfra);
+					let overcircles = document.getElementById('o'+cyfra);
+					let numerek = document.getElementById('c'+cyfra);
 					ciircle.style.left = x_pos-75+'px';
 					ciircle.style.top = y_pos-75+'px';
 					overcircles.style.left = x_pos+'px';
@@ -172,5 +157,49 @@
 				}
 				cyfra=cyfra+1;
 				licznik3=licznik3+3;
+				combo++;
+				points=points+(300*combo);
+				textnode2 =combo+"x";
+				llicznikcombo.innerHTML=textnode2;
+				gra.appendChild(llicznikcombo);
+				
+				textnode3 =points;
+				llicznikpkt.innerHTML=textnode3;
+				gra.appendChild(llicznikpkt);
+
+				textnode4 ="Acc: "+celnosc+"%";
+				llicznikacc.innerHTML=textnode4;
+				gra.appendChild(llicznikacc);
+			}
+			//Czyszczenie po grze
+			if(parseInt(song[2+licznik3]+4500)<elapsedTime3){
+				load('clear.js');
+				gra.style.display="none";
+				//let tlo2=
 			}
 }, 1);
+
+				/*document.getElementById("apcircle1").style.display = "none";
+				document.getElementById("o1").style.display = "none";
+				document.getElementById("c1").style.display = "none";
+				document.getElementById("apcircle2").style.display = "none";
+				document.getElementById("o2").style.display = "none";
+				document.getElementById("c2").style.display = "none";
+				document.getElementById("apcircle3").style.display = "none";
+				document.getElementById("o3").style.display = "none";
+				document.getElementById("c3").style.display = "none";
+				document.getElementById("apcircle4").style.display = "none";
+				document.getElementById("o4").style.display = "none";
+				document.getElementById("c4").style.display = "none";
+				document.getElementById("apcircle5").style.display = "none";
+				document.getElementById("o5").style.display = "none";
+				document.getElementById("c5").style.display = "none";
+				document.getElementById("apcircle6").style.display = "none";
+				document.getElementById("o6").style.display = "none";
+				document.getElementById("c6").style.display = "none";
+				document.getElementById("apcircle7").style.display = "none";
+				document.getElementById("o7").style.display = "none";
+				document.getElementById("c7").style.display = "none";
+				document.getElementById("apcircle8").style.display = "none";
+				document.getElementById("o8").style.display = "none";
+				document.getElementById("c8").style.display = "none";*/
