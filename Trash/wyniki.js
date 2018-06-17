@@ -84,13 +84,16 @@ if(miss>10){
 }
 if(miss<=10){
 	//Licznik pkt0
+		if(miss!=0)
+		{
 		let TekstKon = document.createElement('p');	
 		TekstKon.setAttribute("id","TekstKon");	
 		let textnode9 ="Good";
 		TekstKon.innerHTML=textnode9;
 		Menug.appendChild(TekstKon);
+		}
 }
-if(miss<=0){
+if(miss==0){
 	//Licznik pkt0
 		let TekstKon = document.createElement('p');	
 		TekstKon.setAttribute("id","TekstKon");	

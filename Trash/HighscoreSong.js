@@ -42,29 +42,24 @@ let licznik=0;
 				document.getElementById("backk").style.opacity="0."+(k);
 				clearInterval(elapsedTime2); 
 				clearInterval(startTime2); 
-				//console.log(k);
 			}
 		}, 1);
 		
 function giereczka(){
 		document.body.style.backgroundImage = background;
 		document.getElementById("pudlo").style.display = "none";
-		
-		
-		
 		let audio1 = new Audio('empe.mp3');
 		audio1.play();
 		
-		document.addEventListener('keydown', (event) => {
+		/*document.addEventListener('keydown', (event) => {
 			const keyName2 = event.key;
 			if(keyName2=='s')
 				{
 					audio1.pause();
 				}
-		})
+		})*/
 		load('HighscoreSong3.js');
 }
-
 button.onclick=()=>{
 		giereczka();
 }

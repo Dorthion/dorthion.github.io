@@ -137,16 +137,11 @@ addDiv();
 		document.getElementById("BUTTON4").style.display = "inline";
 		console.log("I bardzo dobrze");
 	});
-
-	mainlogo.addEventListener("mouseup", function(){
-		
-	});
 	
 	playy.addEventListener("mousedown", function(){
-		load('Emp.js');
-		load('HighscoreSong.js');
-		//clearInterval(logointerval);
-		//giereczka();
+		document.getElementById("wybor").style.display = "inline";
+		//load('Emp.js');
+		//load('HighscoreSong.js');
 	});
 	
 	exit.addEventListener("mousedown", function(){

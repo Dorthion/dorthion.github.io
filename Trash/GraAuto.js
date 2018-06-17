@@ -1,3 +1,4 @@
+//GRA AUTOMATYCZNA
 //Wczytanie wstepnych wartosci
 		let licznik3=0;
 		let combo=0;
@@ -203,8 +204,9 @@
 				textnode5 ="300: "+p300;
 				llicznikpkt300.innerHTML=textnode5;
 				Menug.appendChild(llicznikpkt300);
+				
 				//Czyszczenie po grze oraz wyniki
-				if(parseInt(song[2+licznik3]+5900)<elapsedTime3){
+				if(parseInt(song[2+licznik3]+5900)>elapsedTime3){
 				//load('clear.js');
 					load('wyniki.js');
 				}

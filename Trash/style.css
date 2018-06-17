@@ -449,3 +449,7 @@ input[type=range]:focus::-ms-fill-upper {
 	height:300px;
 	position: absolute;
 }
+#wybor{
+	 position: absolute;
+	 display: none;
+}
