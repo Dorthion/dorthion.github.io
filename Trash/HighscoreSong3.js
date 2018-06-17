@@ -64,12 +64,40 @@
 		llicznikhp.setAttribute("max","100");
 		gra.appendChild(llicznikhp);
 		
-		//Licznik pkt
+		//Licznik Acc
 		let llicznikacc = document.createElement('p');	
 		llicznikacc.setAttribute("id","llicznikacc");	
 		let textnode4 ="Acc: "+celnosc+"%";
 		llicznikacc.innerHTML=textnode4;
 		Menug.appendChild(llicznikacc);
+		
+		//Licznik pkt300
+		let llicznikpkt300 = document.createElement('p');	
+		llicznikpkt300.setAttribute("id","llicznikpkt300");	
+		let textnode5 ="300: "+p300;
+		llicznikpkt300.innerHTML=textnode5;
+		Menug.appendChild(llicznikpkt300);
+		
+		//Licznik pkt100
+		let llicznikpkt100 = document.createElement('p');	
+		llicznikpkt100.setAttribute("id","llicznikpkt100");	
+		let textnode6 ="100: "+p100;
+		llicznikpkt100.innerHTML=textnode6;
+		Menug.appendChild(llicznikpkt100);
+		
+		//Licznik pkt50
+		let llicznikpkt50 = document.createElement('p');	
+		llicznikpkt50.setAttribute("id","llicznikpkt50");	
+		let textnode7 ="50: "+p50;
+		llicznikpkt50.innerHTML=textnode7;
+		Menug.appendChild(llicznikpkt50);
+		
+		//Licznik pkt0
+		let llicznikpkt0 = document.createElement('p');	
+		llicznikpkt0.setAttribute("id","llicznikpkt0");	
+		let textnode8 ="Miss: "+miss;
+		llicznikpkt0.innerHTML=textnode8;
+		Menug.appendChild(llicznikpkt0);
 //Gra
 		let startTime3 = Date.now();
 		let interval3 = setInterval(function() {
@@ -158,6 +186,7 @@
 				cyfra=cyfra+1;
 				licznik3=licznik3+3;
 				combo++;
+				p300++;
 				points=points+(300*combo);
 				textnode2 =combo+"x";
 				llicznikcombo.innerHTML=textnode2;
@@ -170,11 +199,15 @@
 				textnode4 ="Acc: "+celnosc+"%";
 				llicznikacc.innerHTML=textnode4;
 				Menug.appendChild(llicznikacc);
+				
+				textnode5 ="300: "+p300;
+				llicznikpkt300.innerHTML=textnode5;
+				Menug.appendChild(llicznikpkt300);
 				//Czyszczenie po grze oraz wyniki
 				if(parseInt(song[2+licznik3]+5900)<elapsedTime3){
-				load('clear.js');
-				load('wyniki.js');
+				//load('clear.js');
+					load('wyniki.js');
+				}
 			}
-		}
-}, 1);
+	}, 1);
 				

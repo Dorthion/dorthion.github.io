@@ -355,10 +355,97 @@ input[type=range]:focus::-ms-fill-upper {
 	height:200px;
 	position: absolute;
 }
+
+#llicznikpkt300{
+	color:white;
+	font-family: 'Exo 2', sans-serif;
+	font-size:30px;
+	right: -50px;
+	top: 80px;
+	width:300px;
+	height:200px;
+	position: absolute;
+}
+#llicznikpkt100{
+	color:white;
+	font-family: 'Exo 2', sans-serif;
+	font-size:30px;
+	right: -50px;
+	top: 110px;
+	width:300px;
+	height:200px;
+	position: absolute;
+}
+#llicznikpkt50{
+	color:white;
+	font-family: 'Exo 2', sans-serif;
+	font-size:30px;
+	right: -50px;
+	top: 140px;
+	width:300px;
+	height:200px;
+	position: absolute;
+}
+#llicznikpkt0{
+	color:white;
+	font-family: 'Exo 2', sans-serif;
+	font-size:30px;
+	right: -50px;
+	top: 170px;
+	width:300px;
+	height:200px;
+	position: absolute;
+}
+
 #locena {
     position: absolute;
 	width:400px;
 	height:500px;
     top: 20px;
 	right: -5px;
+}
+#l300 {
+    position: absolute;
+	width:110px;
+	height:110px;
+    top: 100px;
+	left: 170px;
+}
+#l100 {
+    position: absolute;
+	width:110px;
+	height:110px;
+    top: 190px;
+	left: 170px;
+}
+#l50 {
+    position: absolute;
+	width:110px;
+	height:110px;
+    top: 290px;
+	left: 60px;
+}
+#lmiss {
+    position: absolute;
+	width:110px;
+	height:110px;
+    top: 290px;
+	left: 310px;
+}
+#quitt{
+    position: absolute;
+	width:262px;
+	height:148px;
+    left:0px;
+	bottom: 0px;
+}
+#TekstKon{
+	color:yellow;
+	font-family: 'Exo 2', sans-serif;
+	font-size:60px;
+	left: 300px;
+	bottom: -170px;
+	width:500px;
+	height:300px;
+	position: absolute;
 }

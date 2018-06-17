@@ -5,7 +5,7 @@ function random(min,max){
 let Menug = document.getElementById('MainMenu');
 function menu(){
 //Losowanie tła
-let menuimage = "url('MenuBackground/Background"+parseInt(random(1,17))+".jpg'";
+let menuimage = "url('MenuBackground/Background"+parseInt(random(1,22))+".jpg'";
 document.getElementById("backk").style.background = menuimage;
 
 //Obliczanie wielkości przeglądarki
