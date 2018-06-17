@@ -10,6 +10,7 @@ body{
 	/*font-family: 'Cormorant Garamond', serif;*/
 	font-family: 'Exo 2', sans-serif;
 	font-size:30px;
+	cursor: url('Cookiezi/cursor.png') 25 25, auto;
 }
 #osu{
 	position:absolute;
@@ -312,8 +313,8 @@ input[type=range]:focus::-ms-fill-upper {
 	color:white;
 	font-family: 'Exo 2', sans-serif;
 	font-size:45px;
-	left:-320px;
-	bottom: -140px;
+	left:0px;
+	bottom: -150px;
 	width:200px;
 	height:200px;
 	position: absolute;
@@ -323,7 +324,7 @@ input[type=range]:focus::-ms-fill-upper {
 	font-family: 'Exo 2', sans-serif;
 	font-size:45px;
 	right: 100px;
-	top: -50px;
+	top: 0px;
 	width:200px;
 	height:200px;
 	position: absolute;
@@ -349,8 +350,15 @@ input[type=range]:focus::-ms-fill-upper {
 	font-family: 'Exo 2', sans-serif;
 	font-size:30px;
 	right: -100px;
-	top: 0px;
+	top: 50px;
 	width:300px;
 	height:200px;
 	position: absolute;
+}
+#locena {
+    position: absolute;
+	width:400px;
+	height:500px;
+    top: 20px;
+	right: -5px;
 }

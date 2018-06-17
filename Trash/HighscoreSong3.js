@@ -48,14 +48,14 @@
 		llicznikcombo.setAttribute("id","llicznikcombo");		
 		let textnode2 =combo+"x";
 		llicznikcombo.innerHTML=textnode2;
-		gra.appendChild(llicznikcombo);
+		Menug.appendChild(llicznikcombo);
 		
 		//Licznik pkt
 		let llicznikpkt = document.createElement('p');	
 		llicznikpkt.setAttribute("id","llicznikpkt");	
 		let textnode3 =points;
 		llicznikpkt.innerHTML=textnode3;
-		gra.appendChild(llicznikpkt);
+		Menug.appendChild(llicznikpkt);
 		
 		//Licznik hp
 		let llicznikhp = document.createElement('progress');
@@ -69,7 +69,7 @@
 		llicznikacc.setAttribute("id","llicznikacc");	
 		let textnode4 ="Acc: "+celnosc+"%";
 		llicznikacc.innerHTML=textnode4;
-		gra.appendChild(llicznikacc);
+		Menug.appendChild(llicznikacc);
 //Gra
 		let startTime3 = Date.now();
 		let interval3 = setInterval(function() {
@@ -161,45 +161,20 @@
 				points=points+(300*combo);
 				textnode2 =combo+"x";
 				llicznikcombo.innerHTML=textnode2;
-				gra.appendChild(llicznikcombo);
+				Menug.appendChild(llicznikcombo);
 				
 				textnode3 =points;
 				llicznikpkt.innerHTML=textnode3;
-				gra.appendChild(llicznikpkt);
+				Menug.appendChild(llicznikpkt);
 
 				textnode4 ="Acc: "+celnosc+"%";
 				llicznikacc.innerHTML=textnode4;
-				gra.appendChild(llicznikacc);
-			}
-			//Czyszczenie po grze
-			if(parseInt(song[2+licznik3]+4500)<elapsedTime3){
+				Menug.appendChild(llicznikacc);
+				//Czyszczenie po grze oraz wyniki
+				if(parseInt(song[2+licznik3]+5900)<elapsedTime3){
 				load('clear.js');
-				gra.style.display="none";
-				//let tlo2=
+				load('wyniki.js');
 			}
+		}
 }, 1);
-
-				/*document.getElementById("apcircle1").style.display = "none";
-				document.getElementById("o1").style.display = "none";
-				document.getElementById("c1").style.display = "none";
-				document.getElementById("apcircle2").style.display = "none";
-				document.getElementById("o2").style.display = "none";
-				document.getElementById("c2").style.display = "none";
-				document.getElementById("apcircle3").style.display = "none";
-				document.getElementById("o3").style.display = "none";
-				document.getElementById("c3").style.display = "none";
-				document.getElementById("apcircle4").style.display = "none";
-				document.getElementById("o4").style.display = "none";
-				document.getElementById("c4").style.display = "none";
-				document.getElementById("apcircle5").style.display = "none";
-				document.getElementById("o5").style.display = "none";
-				document.getElementById("c5").style.display = "none";
-				document.getElementById("apcircle6").style.display = "none";
-				document.getElementById("o6").style.display = "none";
-				document.getElementById("c6").style.display = "none";
-				document.getElementById("apcircle7").style.display = "none";
-				document.getElementById("o7").style.display = "none";
-				document.getElementById("c7").style.display = "none";
-				document.getElementById("apcircle8").style.display = "none";
-				document.getElementById("o8").style.display = "none";
-				document.getElementById("c8").style.display = "none";*/
+				

@@ -1,5 +1,4 @@
 //Dane wejsciowe
-
 let background = new Image ('PandaHighscore.jpg');
 let button = document.createElement('button');
 let button2 = document.getElementById('Przycisk');
@@ -18,8 +17,8 @@ function backgrounds(){
 function resizeDivs() {
 		let main = document.getElementById('backk').offsetHeight;
 		let sidebar = document.getElementById('body').offsetHeight;
-		console.log(main);		
-		console.log(sidebar);
+		//console.log(main);		
+		//console.log(sidebar);
 		if (sidebar > main) {
 			main = sidebar;
 			document.getElementById('backk').style.height = document.getElementById('body').style.height = dl1 + 'px';

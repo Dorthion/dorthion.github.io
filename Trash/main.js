@@ -2,7 +2,7 @@
 function random(min,max){
 	return Math.random()*(max-min)+min;
 }
-
+let Menug = document.getElementById('MainMenu');
 function menu(){
 //Losowanie tła
 let menuimage = "url('MenuBackground/Background"+parseInt(random(1,17))+".jpg'";
@@ -150,7 +150,7 @@ addDiv();
 	});
 	
 	exit.addEventListener("mousedown", function(){
-		close();
+		location.reload();
 	});
 	//Wczytywanie dodatków
 	load('trail.js');
