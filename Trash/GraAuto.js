@@ -15,8 +15,11 @@
 		let nrkolka2=0;
 		let wcisniecie=0;
 		let g=0;
+		let gra = document.createElement('div');
+		load('Songs/'+pierwszy1+'/song.js');
+		document.getElementById("backk").style.background = "url('Songs/"+pierwszy1+"/bg.jpg')";
 //Plansza + wczytanie kółek
-		
+		gra.innerHTML += '<img id="llicznikhp2" src="Cookiezi/button-middle.png"/>';
 		gra.setAttribute("id","gra");
 		document.getElementById('MainMenu').appendChild(gra);
 		let k1 = document.createElement('div');
@@ -206,7 +209,7 @@
 				Menug.appendChild(llicznikpkt300);
 				
 				//Czyszczenie po grze oraz wyniki
-				if(parseInt(song[2+licznik3]+5900)>elapsedTime3){
+				if(parseInt(song[2+licznik3]+5900)<elapsedTime3 || parseInt(song[2+licznik3])=="NaN"){
 				//load('clear.js');
 					load('wyniki.js');
 				}

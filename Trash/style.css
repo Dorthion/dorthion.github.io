@@ -196,6 +196,7 @@ input[type=range]:focus::-ms-fill-upper {
     top: 0px;
     transition: transform .1s ease-out;
 	left: 0px;
+	
 }
 #logoosu:active{
 	transform: translateX(-150px);
@@ -334,14 +335,14 @@ input[type=range]:focus::-ms-fill-upper {
 	position: absolute;
 	width:320px;
 	height:20px;
-	left:-300px;
+	left:-270px;
 	top: -35px;
 	background: orangered;
 }
 #llicznikhp2{
 	position: absolute;
     top: -50px;
-	left: -340px;
+	left: -310px;
 	height: 50px; 
 	width: 400px;
 }
@@ -452,4 +453,18 @@ input[type=range]:focus::-ms-fill-upper {
 #wybor{
 	 position: absolute;
 	 display: none;
+	 top: 250px;
+	 left:450px;
+	 background: black;
+	 width:400px;
+	 height:130px;
+	 padding-left:40px;
+	 border-radius: 25px;
+}
+#Wokno{
+	position: absolute;
+	top: -27px;
+	right: 0px;
+	witdh:80px;
+	height:80px;
 }

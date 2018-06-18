@@ -185,6 +185,11 @@
 					cyfra=0;
 				}
 				cyfra=cyfra+1;
+				//Czyszczenie po grze oraz wyniki
+				if(parseInt(song[2+licznik3]+5900)>elapsedTime3){
+				//load('clear.js');
+					load('wyniki.js');
+				}
 				licznik3=licznik3+3;
 				combo++;
 				p300++;
@@ -205,11 +210,7 @@
 				llicznikpkt300.innerHTML=textnode5;
 				Menug.appendChild(llicznikpkt300);
 				
-				//Czyszczenie po grze oraz wyniki
-				if(parseInt(song[2+licznik3]+5900)>elapsedTime3){
-				//load('clear.js');
-					load('wyniki.js');
-				}
+				
 			}
 	}, 1);
 				
