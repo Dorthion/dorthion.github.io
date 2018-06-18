@@ -26,10 +26,10 @@ function resizeDivs() {
 			document.getElementById('body').style.height = document.getElementById('backk').style.height = dl1 + 'px' - main;
 		}
 	}
+	
 //Uruchamianie funckji:
 backgrounds();
 resizeDivs();
-
 
 let licznik=0;
 		let startTime2 = Date.now();
