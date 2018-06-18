@@ -18,8 +18,6 @@ function Rozpocznij(nato){
 graj.onclick=()=>{
 		pierwszy1=pierwszy1.value;
 		drugi1=drugi1.value;
-		//var wynik=przelicz(waluta,pierwszy1,drugi1);
 		Rozpocznij(drugi1);
 		document.getElementById("wybor").style.display = "none";
-		
-	}
+}

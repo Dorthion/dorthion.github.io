@@ -104,12 +104,14 @@
 		Menug.appendChild(llicznikpkt0);
 //Gra
 		let startTime3 = Date.now();
+		//Timer główny
 		let interval3 = setInterval(function() {
 			let elapsedTime3 = Date.now() - startTime3;
 			if(parseInt(song[2+licznik3])<elapsedTime3)
 			{
 				let reszta=licznik3%8;
 				if(g<=7){
+					//Tworzenie kółek
 					switch(g){
 						case 0:{
 							k1.innerHTML += '<img id="apcircle'+cyfra+'" src="Cookiezi/approachcircle.png"/>';
@@ -163,12 +165,13 @@
 					g++;
 				}
 				nrkolka2=nrkolka2+1;
+				//Pokazanie, że istnieją
 				if(g>7){
 					document.getElementById("apcircle"+cyfra).style.display = "inline";
 					document.getElementById("o"+cyfra).style.display = "inline";
 					document.getElementById("c"+cyfra).style.display = "inline";
 				}
-				
+				//Zmiana ich pozycji
 				function cirlees(x_pos, y_pos) {
 					console.log("KOLECZKO: "+cyfra);
 					console.log("NUMEEER KOLECZKA: "+nrkolka);
@@ -182,18 +185,18 @@
 					numerek.style.left = x_pos+25+'px';
 					numerek.style.top = y_pos+25+'px';
 				}
+				//Nabijanie liczników
 				cirlees(song[0+licznik3],song[1+licznik3]);
 				if(cyfra==8)
 				{
 					cyfra=0;
 				}
 				cyfra=cyfra+1;
-				//Czyszczenie po grze oraz wyniki
-				
 				licznik3=licznik3+3;
 				combo++;
 				p300++;
 				points=points+(300*combo);
+				//Zmiana pozycji statystyk
 				textnode2 =combo+"x";
 				llicznikcombo.innerHTML=textnode2;
 				Menug.appendChild(llicznikcombo);
@@ -209,15 +212,9 @@
 				textnode5 ="300: "+p300;
 				llicznikpkt300.innerHTML=textnode5;
 				Menug.appendChild(llicznikpkt300);
-				
-				/*//Czyszczenie po grze oraz wyniki
-				if(parseInt(song[2+licznik3]+5900)<elapsedTime3 || parseInt(song[2+licznik3])=="NaN"){
-				//load('clear.js');
-					load('wyniki.js');
-				}*/
 			}
+			//Czyszczenie po grze oraz wyniki
 			if(endtime<elapsedTime3){
-				//load('clear.js');
 					load('wyniki.js');
 			}
 	}, 1);

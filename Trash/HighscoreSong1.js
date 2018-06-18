@@ -1,6 +1,4 @@
 //Dane wejsciowe
-//pierwszy1=pierwszy1.value;
-
 let background = new Image ('Songs/'+pierwszy1+'/bg.jpg');
 let button = document.createElement('button');
 let button2 = document.getElementById('Przycisk');
@@ -10,8 +8,9 @@ let dl2=window.screen.availWidth;
 document.getElementById('foo').appendChild(button);
 button.innerText="Start";
 
+//Funkcje: Tło, rozmiar tła
 function backgrounds(){
-	//document.getElementById("backk").style.background = "url('Songs/"+pierwszy1+"/bg.jpg')";
+	document.getElementById("backk").style.background = "url('Songs/"+pierwszy1+"/bg.jpg')";
 	document.getElementById("pudlo").style.display = "none";
 	document.getElementById("index").style.display = "none";
 }
@@ -19,8 +18,6 @@ function backgrounds(){
 function resizeDivs() {
 		let main = document.getElementById('backk').offsetHeight;
 		let sidebar = document.getElementById('body').offsetHeight;
-		//console.log(main);		
-		//console.log(sidebar);
 		if (sidebar > main) {
 			main = sidebar;
 			document.getElementById('backk').style.height = document.getElementById('body').style.height = dl1 + 'px';
@@ -49,18 +46,9 @@ let licznik=0;
 		
 function giereczka(){
 		document.body.style.backgroundImage = background;
-		document.getElementById("backk").style.background = "url('Songs/"+pierwszy1+"/bg.jpg')";
 		document.getElementById("pudlo").style.display = "none";
 		let audio1 = new Audio('Songs/'+pierwszy1+'/audio.mp3');
 		audio1.play();
-		
-		/*document.addEventListener('keydown', (event) => {
-			const keyName2 = event.key;
-			if(keyName2=='s')
-				{
-					audio1.pause();
-				}
-		})*/
 		load('GraNorm.js');
 }
 button.onclick=()=>{
