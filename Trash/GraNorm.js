@@ -111,7 +111,7 @@
 			{
 				let reszta=licznik3%8;
 				if(g<=7){
-					//Tworzenie kółek
+				//Tworzenie kółek
 					switch(g){
 						case 0:{
 							k1.innerHTML += '<img id="apcircle'+cyfra+'" src="Cookiezi/approachcircle.png"/>';
@@ -165,13 +165,13 @@
 					g++;
 				}
 				nrkolka2=nrkolka2+1;
-				//Pokazanie, że istnieją
+			//Pokazanie, że istnieją
 				if(g>7){
 					document.getElementById("apcircle"+cyfra).style.display = "inline";
 					document.getElementById("o"+cyfra).style.display = "inline";
 					document.getElementById("c"+cyfra).style.display = "inline";
 				}
-				//Zmiana ich pozycji
+			//Zmiana ich pozycji
 				function cirlees(x_pos, y_pos) {
 					console.log("KOLECZKO: "+cyfra);
 					console.log("NUMEEER KOLECZKA: "+nrkolka);
@@ -185,7 +185,7 @@
 					numerek.style.left = x_pos+25+'px';
 					numerek.style.top = y_pos+25+'px';
 				}
-				//Nabijanie liczników
+			//Nabijanie liczników
 				cirlees(song[0+licznik3],song[1+licznik3]);
 				if(cyfra==8)
 				{
@@ -196,7 +196,7 @@
 				combo++;
 				p300++;
 				points=points+(300*combo);
-				//Zmiana pozycji statystyk
+			//Zmiana pozycji statystyk
 				textnode2 =combo+"x";
 				llicznikcombo.innerHTML=textnode2;
 				Menug.appendChild(llicznikcombo);

@@ -22,6 +22,25 @@ document.getElementById("llicznikpkt300").style.fontSize="45px";
 document.getElementById("llicznikpkt100").style.fontSize="45px";
 document.getElementById("llicznikpkt50").style.fontSize="45px";
 document.getElementById("llicznikpkt0").style.fontSize="45px";
+let SumaPoints2=points;
+let SumaCelnosci2=celnosc;
+
+//if (typeof(Storage) !== "undefined") {
+    if (localStorage.getItem('SScore') != null) {
+        SumaPoints2=parseInt(localStorage.getItem('SScore')) + parseInt(points);
+		SumaCelnosci2=SumaPoints2=parseInt(localStorage.getItem('SAcc')) + parseInt(celnosc);
+		localStorage.setItem('SScore', SumaPoints2);
+		localStorage.setItem('SAcc', SumaCelnosci2);
+    }
+//}
+else{
+	SumaPoints2=parseInt(points);
+	localStorage.setItem('SScore', SumaPoints2);
+	SumaCelnosci2=parseInt(celnosc);
+	localStorage.setItem('SAcc', SumaCelnosci2);
+}
+
+
 
 /*textnode4 =celnosc+"%";
 llicznikacc.innerHTML=textnode4;

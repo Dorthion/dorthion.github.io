@@ -216,6 +216,7 @@
 			//Czyszczenie po grze oraz wyniki
 			if(endtime<elapsedTime3){
 					load('wyniki.js');
+					clearInterval(interval3);
 			}
 	}, 1);
 				
