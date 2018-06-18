@@ -11,10 +11,17 @@
 		let celnosc=100.00;
 		let hp=100;
 		let cyfra=1;
+		let l1=0;
+		let l2=0;
+		let l3=0;
+		let l4=0;
+		let l5=0;
+		let l6=0;
+		let l7=0;
+		let l8=0;
+		let g=0;
 		let nrkolka=1;
 		let nrkolka2=0;
-		let wcisniecie=0;
-		let g=0;
 		let gra = document.createElement('div');
 		load('Songs/'+pierwszy1+'/song.js');
 		document.getElementById("backk").style.background = "url('Songs/"+pierwszy1+"/bg.jpg')";
@@ -164,6 +171,7 @@
 					}
 					g++;
 				}
+				
 				nrkolka2=nrkolka2+1;
 			//Pokazanie, że istnieją
 				if(g>7){
@@ -193,8 +201,8 @@
 				}
 				cyfra=cyfra+1;
 				licznik3=licznik3+3;
-				combo++;
-				p300++;
+				
+				
 				points=points+(300*combo);
 			//Zmiana pozycji statystyk
 				textnode2 =combo+"x";
@@ -209,10 +217,130 @@
 				llicznikacc.innerHTML=textnode4;
 				Menug.appendChild(llicznikacc);
 				
-				textnode5 ="300: "+p300;
-				llicznikpkt300.innerHTML=textnode5;
-				Menug.appendChild(llicznikpkt300);
+			//Klikanie
+			k1.addEventListener("mousedown", function(){
+					document.getElementById("apcircle1").style.display = "none";
+					document.getElementById("o1").style.display = "none";
+					document.getElementById("c1").style.display = "none";
+					l1++;
+			});
+			if(l1>0){
+				p300=p300+1;
+					combo++;
+					llicznikhp.value += 4;
+					textnode5 ="300: "+p300;
+					llicznikpkt300.innerHTML=textnode5;
+					Menug.appendChild(llicznikpkt300);
+					l1=0;
 			}
+			k2.addEventListener("mousedown", function(){
+					document.getElementById("apcircle2").style.display = "none";
+					document.getElementById("o2").style.display = "none";
+					document.getElementById("c2").style.display = "none";
+					l2++;
+			});
+			if(l2>0){
+				p300=p300+1;
+					combo++;
+					llicznikhp.value += 4;
+					textnode5 ="300: "+p300;
+					llicznikpkt300.innerHTML=textnode5;
+					Menug.appendChild(llicznikpkt300);
+					l2=0;
+			}
+			k3.addEventListener("mousedown", function(){
+					document.getElementById("apcircle3").style.display = "none";
+					document.getElementById("o3").style.display = "none";
+					document.getElementById("c3").style.display = "none";
+					l3++;
+			});
+			if(l3>0){
+				p300=p300+1;
+					combo++;
+					llicznikhp.value += 4;
+					textnode5 ="300: "+p300;
+					llicznikpkt300.innerHTML=textnode5;
+					Menug.appendChild(llicznikpkt300);
+					l3=0;
+			}
+			k4.addEventListener("mousedown", function(){
+					document.getElementById("apcircle4").style.display = "none";
+					document.getElementById("o4").style.display = "none";
+					document.getElementById("c4").style.display = "none";
+					l4++;
+			});
+			if(l4>0){
+				p300=p300+1;
+					combo++;
+					llicznikhp.value += 4;
+					textnode5 ="300: "+p300;
+					llicznikpkt300.innerHTML=textnode5;
+					Menug.appendChild(llicznikpkt300);
+					l4=0;
+			}
+			k5.addEventListener("mousedown", function(){
+					document.getElementById("apcircle5").style.display = "none";
+					document.getElementById("o5").style.display = "none";
+					document.getElementById("c5").style.display = "none";
+					l5++;
+			});
+			if(l5>0){
+				p300=p300+1;
+					combo++;
+					llicznikhp.value += 4;
+					textnode5 ="300: "+p300;
+					llicznikpkt300.innerHTML=textnode5;
+					Menug.appendChild(llicznikpkt300);
+					l5=0;
+			}
+			k6.addEventListener("mousedown", function(){
+					document.getElementById("apcircle6").style.display = "none";
+					document.getElementById("o6").style.display = "none";
+					document.getElementById("c6").style.display = "none";
+					l6++;
+			});
+			if(l6>0){
+				p300=p300+1;
+					combo++;
+					llicznikhp.value += 4;
+					textnode5 ="300: "+p300;
+					llicznikpkt300.innerHTML=textnode5;
+					Menug.appendChild(llicznikpkt300);
+					l6=0;
+			}
+			k7.addEventListener("mousedown", function(){
+					document.getElementById("apcircle7").style.display = "none";
+					document.getElementById("o7").style.display = "none";
+					document.getElementById("c7").style.display = "none";
+					l7++;
+			});
+			if(l7>0){
+				p300=p300+1;
+					combo++;
+					llicznikhp.value += 4;
+					textnode5 ="300: "+p300;
+					llicznikpkt300.innerHTML=textnode5;
+					Menug.appendChild(llicznikpkt300);
+					l7=0;
+			}
+			k8.addEventListener("mousedown", function(){
+					document.getElementById("apcircle8").style.display = "none";
+					document.getElementById("o8").style.display = "none";
+					document.getElementById("c8").style.display = "none";
+					l8++;
+			});	
+			if(l8>0){
+				p300=p300+1;
+					combo++;
+					llicznikhp.value += 4;
+					textnode5 ="300: "+p300;
+					llicznikpkt300.innerHTML=textnode5;
+					Menug.appendChild(llicznikpkt300);
+					l8=0;
+			}
+			}
+			
+			llicznikhp.value -= 0.02;
 			//Czyszczenie po grze oraz wyniki
 			if(endtime<elapsedTime3){
 					load('wyniki.js');
