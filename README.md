@@ -11,10 +11,34 @@ This site is all about uni projects, some stuff is copyrighted (list of this sho
 
 ## List (Of copyrighted stuff - not my own, named + linked):
 
--Teminite & Panda Eyes - Highscore (https://www.youtube.com/watch?v=Qg1qZq5yjps)
+- DZIDZIO - Yalta (https://osu.ppy.sh/s/485903)
 
--NEFFEX - Rumours (https://www.youtube.com/watch?v=kXptPzKNMq4)
+- Hurts - Devotion (https://osu.ppy.sh/s/249797)
 
--Araki - Teo (https://www.youtube.com/watch?v=DStvfO_EWGU)
+- Kan R. Gao - To The Moon (https://osu.ppy.sh/s/72137)
 
--Osu! Assets - (https://github.com/ppy/osu-resources) [Maybe it will be changed soon]
+- ClariS - Hitorigoto (https://osu.ppy.sh/s/596704)
+
+- Komiya Mao - (Can you) Understand Me? (https://osu.ppy.sh/s/455482)
+
+- Fat Rat - Unity (https://osu.ppy.sh/b/1035421)
+
+- Karetus - Full Flavor (Part I) (https://osu.ppy.sh/b/1193937)
+
+- Getter Jaani - Rockefeller Street (https://osu.ppy.sh/b/110175)
+
+- Jam Project - The Hero!! (https://osu.ppy.sh/b/900576)
+
+- Kurokotei - Galaxy Collapse (https://osu.ppy.sh/b/924759)
+
+- The Koxx - A Fool Moon Night (https://osu.ppy.sh/b/1134237)
+
+- Undead Corporation - The Empress (https://osu.ppy.sh/b/729138)
+
+- Pegboard Nerds ft. Tristam - Razor Sharp (https://osu.ppy.sh/b/583277)
+
+- System Of A Down - BYOB (https://osu.ppy.sh/b/911200)
+
+- Knife Party - Centipede (https://osu.ppy.sh/b/372245)
+
+-Osu! Assets - (https://github.com/ppy/osu-resources)
