@@ -332,42 +332,6 @@
 					document.getElementById("o"+cyfra).style.display = "inline";
 					document.getElementById("c"+cyfra).style.display = "inline";
 				}
-				
-				//var usuwanie = document.getElementById('c'+nrkolka);
-				/*var usuwanie2 = document.getElementById('o'+nrkolka);
-				var usuwanie3 = document.getElementById('apcircle'+nrkolka);*/
-				/*usuwanie.addEventListener("mousedown", function(){  //BŁĄD
-					document.getElementById('c'+nrkolka).style.display = "none"; //BŁĄD
-					document.getElementById('o'+nrkolka).style.display = "none";
-					document.getElementById('apcircle'+nrkolka).style.display = "none";
-					nrkolka=nrkolka+1;
-					if(nrkolka==8)
-					{
-						nrkolka=1;
-					}
-					wcisniecie=wcisniecie+1;
-				});*/
-				
-				
-				
-				
-				//TIMER
-				/*var Aptiming = Date.now();
-				var Aptimer = setInterval(function() {
-					let Apcirtimer = Date.now() - Aptiming;
-					if(nrkolka2>wcisniecie){
-						var usuwanie4 = document.getElementById('c'+wcisniecie);
-						/*var usuwanie5 = document.getElementById('o'+wcisniecie);
-						var usuwanie6 = document.getElementById('apcircle'+wcisniecie);
-						usuwanie4.addEventListener("mousedown", function(){
-							document.getElementById('c'+nrkolka).style.display = "none"; //BŁĄD
-							document.getElementById('o'+nrkolka).style.display = "none";
-							document.getElementById('apcircle'+nrkolka).style.display = "none";
-							//nrkolka=nrkolka+1;
-							wcisniecie=wcisniecie+1;
-						});
-					}
-				}, 1000);*/
 					
 				function cirlees(x_pos, y_pos) {
 					console.log("KOLECZKO: "+cyfra);

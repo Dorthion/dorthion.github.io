@@ -54,7 +54,7 @@ addDiv();
 	let menulogoo = document.createElement('div'); //LOGO
 	menulogoo.setAttribute("id","menulogoo");
 	document.getElementsByClassName('bars')[0].appendChild(menulogoo);
-	load2('style5.css');
+	load2('style3.css');
 	//----------------------------------------------------------------------
 	let playy = new Image(423,87);    //PLAY
 	playy.src = 'Icons/playy.png';
@@ -74,14 +74,6 @@ addDiv();
 	let mainlogo = new Image(550,550);    //OSU!JS LOGO
 	mainlogo.src = 'MenuBackground/OsuWow.png';
 	document.getElementById("menulogoo").appendChild(mainlogo);
-	
-	//TIMER
-	/*	let startTime = Date.now();
-		let interval = setInterval(function() {
-		let elapsedTime = Date.now() - startTime;
-		document.getElementById("timer").innerHTML = (elapsedTime / 1);
-	}, 1);*/
-	
 	let czyruszony = 0;
 	
 	//Automatyczne zamkniecie
@@ -113,16 +105,10 @@ addDiv();
 	
 	//Bawienie się z logiem
 	mainlogo.addEventListener("mouseout", function(){
-		
 		auto(czyruszony);
 		czyruszony=5000;
 		console.log("XD");
 	});
-	
-	/*mainlogo.addEventListener("mousein", function(){
-		auto();
-		console.log("XD");
-	});*/
 	
 	mainlogo.addEventListener("mousedown", function(){
 		if(czyruszony>=1)
