@@ -66,6 +66,7 @@ function giereczka(){
 		audio1.play();
 		load('GraAuto.js');
 }
+//PRZYCISKI
 button3.onclick=()=>{
 		document.getElementById("backk").style.opacity="0.0";
 }
@@ -83,6 +84,7 @@ button7.onclick=()=>{
 }
 button.onclick=()=>{
 		giereczka();
+		CCIRCLES.pause();
 		button.style.display="none";
 		button3.style.display="none";
 		button4.style.display="none";

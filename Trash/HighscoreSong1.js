@@ -64,6 +64,7 @@ function giereczka(){
 		audio1.play();
 		load('GraNorm.js');
 }
+//PRZYCISKI
 button3.onclick=()=>{
 		document.getElementById("backk").style.opacity="0.0";
 }
@@ -80,6 +81,7 @@ button7.onclick=()=>{
 		document.getElementById("backk").style.opacity="1.0";
 }
 button.onclick=()=>{
+		CCIRCLES.pause();
 		giereczka();
 		button.style.display="none";
 		button3.style.display="none";

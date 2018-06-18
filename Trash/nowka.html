@@ -81,11 +81,13 @@
 <script>
 let przyciskk = document.getElementById("Przycisk2");
 let Welcome = new Audio('Cookiezi/welcome.mp3');
+let CCIRCLES = new Audio('Songs/Circles.mp3');
 przyciskk.onclick=()=>{
 	document.getElementById("ciemnia").style.display ="none";
 	document.getElementById("MainMenu").style.display = "inline";
 	document.getElementById("backk").style.display = "inline";
 	Welcome.play();
+	CCIRCLES.play();
 	load('main.js')
 }
 </script>
