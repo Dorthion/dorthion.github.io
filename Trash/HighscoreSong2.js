@@ -60,11 +60,10 @@ let licznik=0;
 				clearInterval(startTime2); 
 			}
 		}, 1);
-		
+let audio1 = new Audio('Songs/'+pierwszy1+'/audio.mp3');
 function giereczka(){
 		document.body.style.backgroundImage = background;
 		document.getElementById("pudlo").style.display = "none";
-		let audio1 = new Audio('Songs/'+pierwszy1+'/audio.mp3');
 		audio1.play();
 		load('GraAuto.js');
 }
@@ -90,9 +89,9 @@ button7.onclick=()=>{
 		MenuClick2.play();
 }
 button.onclick=()=>{
-		giereczka();
-		MenuClick1.play();
 		CCIRCLES.pause();
+		MenuClick1.play();
+		giereczka();
 		button.style.display="none";
 		button3.style.display="none";
 		button4.style.display="none";

@@ -1,4 +1,5 @@
 let Wokno=document.getElementById("Wokno");
+let GrajSong = new Audio('Cookiezi/normal-hitwhistle1.wav');
 Wokno.addEventListener("mousedown", function(){
 	location.reload();
 });
@@ -14,6 +15,7 @@ function Rozpocznij(nato){
 	}
 }
 graj.onclick=()=>{
+		GrajSong.play();
 		pierwszy1=pierwszy1.value;
 		drugi1=drugi1.value;
 		Rozpocznij(drugi1);

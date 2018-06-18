@@ -1,6 +1,8 @@
 //GRA NORMALNA
 //Wczytanie wstepnych wartosci
 		let licznik3=0;
+		let combomax=0;
+		let combopob=0;
 		let combo=0;
 		let points=0;
 		let p300=0;
@@ -8,7 +10,7 @@
 		let p50=0;
 		let miss=0;
 		let mnoznik=1;
-		let celnosc=100.00;
+		let celnosc=100;
 		let hp=100;
 		let cyfra=1;
 		let l1=0;
@@ -24,7 +26,7 @@
 		let nrkolka=1;
 		let nrkolka2=0;
 		let gra = document.createElement('div');
-		let BgMiss = document.getElementById('foo');
+		let BgMiss = document.getElementById('MainMenu');
 		let Cclick = new Audio('Cookiezi/normal-hitclap.wav');
 		load('Songs/'+pierwszy1+'/song.js');
 		document.getElementById("backk").style.background = "url('Songs/"+pierwszy1+"/bg.jpg')";
@@ -351,18 +353,27 @@
 					l8=0;
 			}
 			BgMiss.addEventListener("mousedown", function(){
-				console.log("TAK");
+				//console.log("TAK");
 					l9++;
 			});	
 			if(l9>0)
 			{
+				/*combopob=combo;
+				if(combomax<=combopob){
+					combomax=combopob;
+				}
+				combopob=0;*/
 				combo=0;
+				celnosc=celnosc-5;
 				miss++;
 				l9=0;
 				llicznikhp.value -= 10;
 				let textnode8 ="Miss: "+miss;
 				llicznikpkt0.innerHTML=textnode8;
 				Menug.appendChild(llicznikpkt0);
+				let textnode4 ="Acc: "+celnosc+"%";
+				llicznikacc.innerHTML=textnode4;
+				Menug.appendChild(llicznikacc);
 			}
 			}
 			
@@ -373,6 +384,9 @@
 			}
 			//Czyszczenie po grze oraz wyniki
 			if(endtime<elapsedTime3){
+				/*let textnode2 =combomax+"x";
+				llicznikcombo.innerHTML=textnode2;
+				Menug.appendChild(llicznikcombo);*/
 				clearInterval(interval3);
 				load('wyniki.js');
 			}
