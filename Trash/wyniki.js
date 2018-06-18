@@ -23,7 +23,7 @@ document.getElementById("llicznikpkt100").style.fontSize="45px";
 document.getElementById("llicznikpkt50").style.fontSize="45px";
 document.getElementById("llicznikpkt0").style.fontSize="45px";
 
-textnode4 =celnosc+"%";
+/*textnode4 =celnosc+"%";
 llicznikacc.innerHTML=textnode4;
 Menug.appendChild(llicznikacc);
 				
@@ -41,7 +41,7 @@ Menug.appendChild(llicznikpkt50);
 
 textnode8 =miss;
 llicznikpkt300.innerHTML=textnode8;
-Menug.appendChild(llicznikpkt0);
+Menug.appendChild(llicznikpkt0);*/
 
 let locena = new Image(400,500);    //Ocena
 locena.setAttribute("id","locena");
