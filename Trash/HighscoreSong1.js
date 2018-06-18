@@ -22,6 +22,9 @@ button4.innerText="Opacity: 25%";
 button5.innerText="Opacity: 50%";
 button6.innerText="Opacity: 75%";
 button7.innerText="Opacity: 100%";
+let MenuClick1 = new Audio('Cookiezi/menuclick.wav');
+let MenuClick2 = new Audio('Cookiezi/MenuHit.wav');
+
 //Funkcje: Tło, rozmiar tła
 function backgrounds(){
 	document.getElementById("backk").style.background = "url('Songs/"+pierwszy1+"/bg.jpg')";
@@ -67,21 +70,27 @@ function giereczka(){
 //PRZYCISKI
 button3.onclick=()=>{
 		document.getElementById("backk").style.opacity="0.0";
+		MenuClick2.play();
 }
 button4.onclick=()=>{
 		document.getElementById("backk").style.opacity="0.25";
+		MenuClick2.play();
 }
 button5.onclick=()=>{
 		document.getElementById("backk").style.opacity="0.5";
+		MenuClick2.play();
 }
 button6.onclick=()=>{
 		document.getElementById("backk").style.opacity="0.75";
+		MenuClick2.play();
 }
 button7.onclick=()=>{
 		document.getElementById("backk").style.opacity="1.0";
+		MenuClick2.play();
 }
 button.onclick=()=>{
 		CCIRCLES.pause();
+		MenuClick1.play();
 		giereczka();
 		button.style.display="none";
 		button3.style.display="none";

@@ -8,6 +8,10 @@ function menu(){
 let menuimage = "url('MenuBackground/Background"+parseInt(random(1,22))+".jpg'";
 document.getElementById("backk").style.background = menuimage;
 
+//Dzwiek Menu oraz gry
+let MenuClick1 = new Audio('Cookiezi/menuclick.wav');
+let MenuClick2 = new Audio('Cookiezi/MenuHit.wav');
+
 //Obliczanie wielkości przeglądarki
 let dlug1=window.screen.availHeight;
 let dlug2=window.screen.availWidth;
@@ -121,16 +125,19 @@ addDiv();
 		document.getElementById("BUTTON2").style.display = "inline";
 		document.getElementById("BUTTON3").style.display = "inline";
 		document.getElementById("BUTTON4").style.display = "inline";
-		console.log("I bardzo dobrze");
+		MenuClick1.play();
+		//console.log("I bardzo dobrze");
 	});
 	
 	playy.addEventListener("mousedown", function(){
 		document.getElementById("wybor").style.display = "inline";
 		document.getElementById("pudlo").style.display = "none";
+		MenuClick2.play();
 		load('Wokno.js');
 	});
 	
 	exit.addEventListener("mousedown", function(){
+		MenuClick2.play();
 		location.reload();
 	});
 	//Wczytywanie dodatków

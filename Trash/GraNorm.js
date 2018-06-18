@@ -25,6 +25,7 @@
 		let nrkolka2=0;
 		let gra = document.createElement('div');
 		let BgMiss = document.getElementById('foo');
+		let Cclick = new Audio('Cookiezi/normal-hitclap.wav');
 		load('Songs/'+pierwszy1+'/song.js');
 		document.getElementById("backk").style.background = "url('Songs/"+pierwszy1+"/bg.jpg')";
 //Plansza + wczytanie kółek
