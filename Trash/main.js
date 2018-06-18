@@ -127,10 +127,7 @@ addDiv();
 	playy.addEventListener("mousedown", function(){
 		document.getElementById("wybor").style.display = "inline";
 		document.getElementById("pudlo").style.display = "none";
-		
 		load('Wokno.js');
-		//load('Emp.js');
-		//load('HighscoreSong.js');
 	});
 	
 	exit.addEventListener("mousedown", function(){

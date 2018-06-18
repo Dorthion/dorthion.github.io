@@ -22,50 +22,30 @@ document.getElementById("llicznikpkt300").style.fontSize="45px";
 document.getElementById("llicznikpkt100").style.fontSize="45px";
 document.getElementById("llicznikpkt50").style.fontSize="45px";
 document.getElementById("llicznikpkt0").style.fontSize="45px";
-let SumaPoints2=points;
-let SumaCelnosci2=celnosc;
 
-//if (typeof(Storage) !== "undefined") {
-    if (localStorage.getItem('SScore') != null) {
+let WinSong = new Audio('Cookiezi/applause2.wav');
+WinSong.play();
+
+if (localStorage.getItem('SScore') != null) {
+		let SumaPoints2=points;
+		let SumaCelnosci2=celnosc;
         SumaPoints2=parseInt(localStorage.getItem('SScore')) + parseInt(points);
 		SumaCelnosci2=SumaPoints2=parseInt(localStorage.getItem('SAcc')) + parseInt(celnosc);
 		localStorage.setItem('SScore', SumaPoints2);
 		localStorage.setItem('SAcc', SumaCelnosci2);
-    }
-//}
+}
 else{
 	SumaPoints2=parseInt(points);
 	localStorage.setItem('SScore', SumaPoints2);
 	SumaCelnosci2=parseInt(celnosc);
 	localStorage.setItem('SAcc', SumaCelnosci2);
 }
-
-
-
-/*textnode4 =celnosc+"%";
-llicznikacc.innerHTML=textnode4;
-Menug.appendChild(llicznikacc);
-				
-textnode5 =p300;
-llicznikpkt300.innerHTML=textnode5;
-Menug.appendChild(llicznikpkt300);
-
-textnode6 =p100;
-llicznikpkt300.innerHTML=textnode6;
-Menug.appendChild(llicznikpkt100);
-
-textnode7 =p50;
-llicznikpkt300.innerHTML=textnode7;
-Menug.appendChild(llicznikpkt50);
-
-textnode8 =miss;
-llicznikpkt300.innerHTML=textnode8;
-Menug.appendChild(llicznikpkt0);*/
-
+if(drugi1==2){
 let locena = new Image(400,500);    //Ocena
 locena.setAttribute("id","locena");
 locena.src = 'Cookiezi/ranking-X.png';
 document.getElementById('MainMenu').appendChild(locena);
+}
 
 let l300 = new Image(110,110);    //Licznik 300
 l300.setAttribute("id","l300");
@@ -94,7 +74,12 @@ document.getElementById('MainMenu').appendChild(quitt);
 
 //TEKST KONCOWY WYNIKU
 if(miss>10){
-	//Licznik pkt0
+		if(drugi1==1){
+			let locena = new Image(400,500);    //Ocena
+			locena.setAttribute("id","locena");
+			locena.src = 'Cookiezi/ranking-D.png';
+			document.getElementById('MainMenu').appendChild(locena);
+		}
 		let TekstKon = document.createElement('p');	
 		TekstKon.setAttribute("id","TekstKon");	
 		let textnode9 ="Bad";
@@ -102,18 +87,28 @@ if(miss>10){
 		Menug.appendChild(TekstKon);
 }
 if(miss<=10){
-	//Licznik pkt0
 		if(miss!=0)
 		{
-		let TekstKon = document.createElement('p');	
-		TekstKon.setAttribute("id","TekstKon");	
-		let textnode9 ="Good";
-		TekstKon.innerHTML=textnode9;
-		Menug.appendChild(TekstKon);
+			if(drugi1==1){
+			let locena = new Image(400,500);    //Ocena
+			locena.setAttribute("id","locena");
+			locena.src = 'Cookiezi/ranking-A.png';
+			document.getElementById('MainMenu').appendChild(locena);
+		}
+			let TekstKon = document.createElement('p');	
+			TekstKon.setAttribute("id","TekstKon");	
+			let textnode9 ="Good";
+			TekstKon.innerHTML=textnode9;
+			Menug.appendChild(TekstKon);
 		}
 }
 if(miss==0){
-	//Licznik pkt0
+		if(drugi1==1){
+			let locena = new Image(400,500);    //Ocena
+			locena.setAttribute("id","locena");
+			locena.src = 'Cookiezi/ranking-S.png';
+			document.getElementById('MainMenu').appendChild(locena);
+		}
 		let TekstKon = document.createElement('p');	
 		TekstKon.setAttribute("id","TekstKon");	
 		let textnode9 ="Perfect";

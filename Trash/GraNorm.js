@@ -19,10 +19,12 @@
 		let l6=0;
 		let l7=0;
 		let l8=0;
+		let l9=0;
 		let g=0;
 		let nrkolka=1;
 		let nrkolka2=0;
 		let gra = document.createElement('div');
+		let BgMiss = document.getElementById('foo');
 		load('Songs/'+pierwszy1+'/song.js');
 		document.getElementById("backk").style.background = "url('Songs/"+pierwszy1+"/bg.jpg')";
 //Plansza + wczytanie kółek
@@ -114,6 +116,9 @@
 		//Timer główny
 		let interval3 = setInterval(function() {
 			let elapsedTime3 = Date.now() - startTime3;
+			if(parseInt(song[2])>elapsedTime3){
+				llicznikhp.value += 4;
+			}
 			if(parseInt(song[2+licznik3])<elapsedTime3)
 			{
 				let reszta=licznik3%8;
@@ -124,62 +129,61 @@
 							k1.innerHTML += '<img id="apcircle'+cyfra+'" src="Cookiezi/approachcircle.png"/>';
 							k1.innerHTML += '<img id="o'+cyfra+'" src="Cookiezi/hitcircleoverlay.png" />';
 							k1.innerHTML += '<img id="c'+cyfra+'" src="Cookiezi/default-'+cyfra+'.png" />';
-							document.getElementById('apcircle1').style.animation = "ruch 2.0s";
+							document.getElementById('apcircle1').style.animation = "ruch 1.0s";
 							break;
 						}
 						case 1:{
 							k2.innerHTML += '<img id="apcircle'+cyfra+'" src="Cookiezi/approachcircle.png"/>';
 							k2.innerHTML += '<img id="o'+cyfra+'" src="Cookiezi/hitcircleoverlay.png" />';
 							k2.innerHTML += '<img id="c'+cyfra+'" src="Cookiezi/default-'+cyfra+'.png" />';
-							document.getElementById('apcircle2').style.animation = "ruch 2.0s";
+							document.getElementById('apcircle2').style.animation = "ruch 1.0s";
 							break;
 						}
 						case 2:{
 							k3.innerHTML += '<img id="apcircle'+cyfra+'" src="Cookiezi/approachcircle.png"/>';
 							k3.innerHTML += '<img id="o'+cyfra+'" src="Cookiezi/hitcircleoverlay.png" />';
 							k3.innerHTML += '<img id="c'+cyfra+'" src="Cookiezi/default-'+cyfra+'.png" />';
-							document.getElementById('apcircle3').style.animation = "ruch 2.0s";
+							document.getElementById('apcircle3').style.animation = "ruch 1.0s";
 							break;
 						}
 						case 3:{
 							k4.innerHTML += '<img id="apcircle'+cyfra+'" src="Cookiezi/approachcircle.png"/>';
 							k4.innerHTML += '<img id="o'+cyfra+'" src="Cookiezi/hitcircleoverlay.png" />';
 							k4.innerHTML += '<img id="c'+cyfra+'" src="Cookiezi/default-'+cyfra+'.png" />';
-							document.getElementById('apcircle4').style.animation = "ruch 2.0s";
+							document.getElementById('apcircle4').style.animation = "ruch 1.0s";
 							break;
 						}
 						case 4:{
 							k5.innerHTML += '<img id="apcircle'+cyfra+'" src="Cookiezi/approachcircle.png"/>';
 							k5.innerHTML += '<img id="o'+cyfra+'" src="Cookiezi/hitcircleoverlay.png" />';
 							k5.innerHTML += '<img id="c'+cyfra+'" src="Cookiezi/default-'+cyfra+'.png" />';
-							document.getElementById('apcircle5').style.animation = "ruch 2.0s";
+							document.getElementById('apcircle5').style.animation = "ruch 1.0s";
 							break;
 						}
 						case 5:{
 							k6.innerHTML += '<img id="apcircle'+cyfra+'" src="Cookiezi/approachcircle.png"/>';
 							k6.innerHTML += '<img id="o'+cyfra+'" src="Cookiezi/hitcircleoverlay.png" />';
 							k6.innerHTML += '<img id="c'+cyfra+'" src="Cookiezi/default-'+cyfra+'.png" />';
-							document.getElementById('apcircle6').style.animation = "ruch 2.0s";
+							document.getElementById('apcircle6').style.animation = "ruch 1.0s";
 							break;
 						}
 						case 6:{
 							k7.innerHTML += '<img id="apcircle'+cyfra+'" src="Cookiezi/approachcircle.png"/>';
 							k7.innerHTML += '<img id="o'+cyfra+'" src="Cookiezi/hitcircleoverlay.png" />';
 							k7.innerHTML += '<img id="c'+cyfra+'" src="Cookiezi/default-'+cyfra+'.png" />';
-							document.getElementById('apcircle7').style.animation = "ruch 2.0s";
+							document.getElementById('apcircle7').style.animation = "ruch 1.0s";
 							break;
 						}
 						case 7:{
 							k8.innerHTML += '<img id="apcircle'+cyfra+'" src="Cookiezi/approachcircle.png"/>';
 							k8.innerHTML += '<img id="o'+cyfra+'" src="Cookiezi/hitcircleoverlay.png" />';
 							k8.innerHTML += '<img id="c'+cyfra+'" src="Cookiezi/default-'+cyfra+'.png" />';
-							document.getElementById('apcircle8').style.animation = "ruch 2.0s";
+							document.getElementById('apcircle8').style.animation = "ruch 1.0s";
 							break;
 						}
 					}
 					g++;
 				}
-				
 				nrkolka2=nrkolka2+1;
 			//Pokazanie, że istnieją
 				if(g>7){
@@ -189,8 +193,8 @@
 				}
 			//Zmiana ich pozycji
 				function cirlees(x_pos, y_pos) {
-					console.log("KOLECZKO: "+cyfra);
-					console.log("NUMEEER KOLECZKA: "+nrkolka);
+					//console.log("KOLECZKO: "+cyfra);
+					//console.log("NUMEEER KOLECZKA: "+nrkolka);
 					let ciircle = document.getElementById('apcircle'+cyfra);
 					let overcircles = document.getElementById('o'+cyfra);
 					let numerek = document.getElementById('c'+cyfra);
@@ -345,12 +349,31 @@
 					Menug.appendChild(llicznikpkt300);
 					l8=0;
 			}
+			BgMiss.addEventListener("mousedown", function(){
+				console.log("TAK");
+					l9++;
+			});	
+			if(l9>0)
+			{
+				combo=0;
+				miss++;
+				l9=0;
+				llicznikhp.value -= 10;
+				let textnode8 ="Miss: "+miss;
+				llicznikpkt0.innerHTML=textnode8;
+				Menug.appendChild(llicznikpkt0);
+			}
 			}
 			
 			llicznikhp.value -= 0.02;
+			if(llicznikhp.value<1){
+				clearInterval(interval3);
+				load('koniec.js');
+			}
 			//Czyszczenie po grze oraz wyniki
 			if(endtime<elapsedTime3){
-					load('wyniki.js');
+				clearInterval(interval3);
+				load('wyniki.js');
 			}
 	}, 1);
 				

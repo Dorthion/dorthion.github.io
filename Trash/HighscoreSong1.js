@@ -2,12 +2,26 @@
 let background = new Image ('Songs/'+pierwszy1+'/bg.jpg');
 let button = document.createElement('button');
 let button2 = document.getElementById('Przycisk');
+let button3 = document.createElement('button');
+let button4 = document.createElement('button');
+let button5 = document.createElement('button');
+let button6 = document.createElement('button');
+let button7 = document.createElement('button');
 let body = document.querySelector("body");
 let dl1=window.screen.availHeight;
 let dl2=window.screen.availWidth;
 document.getElementById('foo').appendChild(button);
+document.getElementById('foo').appendChild(button3);
+document.getElementById('foo').appendChild(button4);
+document.getElementById('foo').appendChild(button5);
+document.getElementById('foo').appendChild(button6);
+document.getElementById('foo').appendChild(button7);
 button.innerText="Start";
-
+button3.innerText="Opacity: 0%";
+button4.innerText="Opacity: 25%";
+button5.innerText="Opacity: 50%";
+button6.innerText="Opacity: 75%";
+button7.innerText="Opacity: 100%";
 //Funkcje: Tło, rozmiar tła
 function backgrounds(){
 	document.getElementById("backk").style.background = "url('Songs/"+pierwszy1+"/bg.jpg')";
@@ -43,15 +57,34 @@ let licznik=0;
 				clearInterval(startTime2); 
 			}
 		}, 1);
-		
+let audio1 = new Audio('Songs/'+pierwszy1+'/audio.mp3');
 function giereczka(){
 		document.body.style.backgroundImage = background;
 		document.getElementById("pudlo").style.display = "none";
-		let audio1 = new Audio('Songs/'+pierwszy1+'/audio.mp3');
 		audio1.play();
 		load('GraNorm.js');
+}
+button3.onclick=()=>{
+		document.getElementById("backk").style.opacity="0.0";
+}
+button4.onclick=()=>{
+		document.getElementById("backk").style.opacity="0.25";
+}
+button5.onclick=()=>{
+		document.getElementById("backk").style.opacity="0.5";
+}
+button6.onclick=()=>{
+		document.getElementById("backk").style.opacity="0.75";
+}
+button7.onclick=()=>{
+		document.getElementById("backk").style.opacity="1.0";
 }
 button.onclick=()=>{
 		giereczka();
 		button.style.display="none";
+		button3.style.display="none";
+		button4.style.display="none";
+		button5.style.display="none";
+		button6.style.display="none";
+		button7.style.display="none";
 }

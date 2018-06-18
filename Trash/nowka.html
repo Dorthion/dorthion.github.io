@@ -40,10 +40,15 @@
 			<option value="8">Getter Jaani - Rockefeller Street</option>
 			<option value="9">Jam Project - The Hero!!</option>
 		</optgroup>
-		<optgroup label="Not playable">
-			<option value="10">Undead Corporation - The Empress</option>
+		<optgroup label="Extreme">
+			<option value="10">Kurokotei - Galaxy Collapse</option>
 			<option value="11">The Koxx - A Fool Moon Night</option>
-			<option value="12">Kurokotei - Galaxy Collapse</option>
+		</optgroup>
+		<optgroup label="Not playable">
+			<option value="12">Undead Corporation - The Empress</option>
+			<option value="13">Pegboard Nerds ft. Tristam - Razor Sharp</option>
+			<option value="14">System Of A Down - BYOB</option>
+			<option value="15">Knife Party - Centipede</option>
 		</optgroup>
 	</select>
 	<button id="graj">Graj!</button>
@@ -73,11 +78,13 @@
 <div id="ciemnia"><center><button id="Przycisk2">Run Osu!JS</button></center></div>
 </body>
 <script>
-var przyciskk = document.getElementById("Przycisk2");
+let przyciskk = document.getElementById("Przycisk2");
+let Welcome = new Audio('Cookiezi/welcome.mp3');
 przyciskk.onclick=()=>{
 	document.getElementById("ciemnia").style.display ="none";
 	document.getElementById("MainMenu").style.display = "inline";
 	document.getElementById("backk").style.display = "inline";
+	Welcome.play();
 	load('main.js')
 }
 </script>

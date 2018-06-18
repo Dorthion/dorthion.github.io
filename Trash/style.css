@@ -57,7 +57,7 @@ div {
 }
 
 /*SUWAK*/
-input[type=range] {
+/*input[type=range] {
 	-webkit-appearance: none;
 	margin: 18px 0;
 	width: 10%;
@@ -144,7 +144,7 @@ input[type=range]:focus::-ms-fill-lower {
 }
 input[type=range]:focus::-ms-fill-upper {
 	background: #367ebd;
-}
+}*/
 #gora{
 	width: 100%;
 	height: 11%;
@@ -173,10 +173,6 @@ input[type=range]:focus::-ms-fill-upper {
 #index{
 	display:inline;
 }
-/*#gra img{
-	witdh: 150px;
-	height: 150px;
-}*/
 .wgracz{
 	width:5%;
 	height: 10%;
@@ -196,7 +192,6 @@ input[type=range]:focus::-ms-fill-upper {
     top: 0px;
     transition: transform .1s ease-out;
 	left: 0px;
-	
 }
 #logoosu:active{
 	transform: translateX(-150px);
@@ -230,6 +225,7 @@ input[type=range]:focus::-ms-fill-upper {
 	width: 6px;
     border-radius: 3px;
     background: teal;
+	pointer-events: none;
 }
 #menulogoo {
     position: absolute;
@@ -296,10 +292,6 @@ input[type=range]:focus::-ms-fill-upper {
 	transition: transform 3s ease-in-out;
 	transform: translateX(340px);
 }
-/*.module {
-  cursor: url('/Cookiezi/cursor.png'), auto;	
-*/
-
 #bars{
 	display: none;
 }
@@ -439,6 +431,13 @@ input[type=range]:focus::-ms-fill-upper {
 	height:148px;
     left:0px;
 	bottom: 0px;
+}
+#quittt{
+    position: absolute;
+	width:398px;
+	height:116px;
+    left:500px;
+	bottom: 400px;
 }
 #TekstKon{
 	color:yellow;

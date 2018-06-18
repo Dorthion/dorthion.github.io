@@ -8,11 +8,9 @@ let drugi1=document.querySelector('#drugi');
 function Rozpocznij(nato){
 	if(nato==1){
 		load('HighscoreSong1.js');
-		//load('GraNorm.js');
 	}
 	if(nato==2){
 		load('HighscoreSong2.js');
-		//load('GraAuto.js');
 	}
 }
 graj.onclick=()=>{
