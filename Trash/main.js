@@ -106,13 +106,13 @@ addDiv();
 		}
 	}
 	
-	//Bawienie się z logiem
+	//Logo - przycisk
 	mainlogo.addEventListener("mouseout", function(){
 		auto(czyruszony);
 		czyruszony=5000;
 		console.log("XD");
 	});
-	
+	//Logo - przycisk2
 	mainlogo.addEventListener("mousedown", function(){
 		if(czyruszony>=1)
 		{
@@ -126,14 +126,14 @@ addDiv();
 		document.getElementById("BUTTON4").style.display = "inline";
 		MenuClick1.play();
 	});
-	
+	//Play - przycisk
 	playy.addEventListener("mousedown", function(){
 		document.getElementById("wybor").style.display = "inline";
 		document.getElementById("pudlo").style.display = "none";
 		MenuClick2.play();
 		load('Wokno.js');
 	});
-	
+	//Quit - przycisk
 	exit.addEventListener("mousedown", function(){
 		MenuClick2.play();
 		location.reload();

@@ -358,6 +358,7 @@
 					Menug.appendChild(llicznikpkt300);
 					l8=0;
 			}
+			//Czy miss
 			BgMiss.addEventListener("mousedown", function(){
 					l9++;
 			});	
@@ -376,7 +377,7 @@
 				Menug.appendChild(llicznikacc);
 			}
 			}
-			
+			//Licznik hp
 			llicznikhp.value -= 0.02;
 			if(llicznikhp.value<1){
 				clearInterval(interval3);

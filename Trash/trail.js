@@ -1,8 +1,11 @@
+//Trail
+//Dane
 var dots = [],
     mouse = {
       x: 0,
       y: 0
     };
+//Dodawanie do wartości "this"
 var Dot = function() {
   this.x = 0;
   this.y = 0;
@@ -13,14 +16,17 @@ var Dot = function() {
     return n;
   }());
 };
+//Zmiana pozycji
 Dot.prototype.draw = function() {
   this.node.style.left = this.x + "px";
   this.node.style.top = this.y + "px";
 };
+//Dodawanie do ekranu
 for (var i = 0; i < 12; i++) {
   var d = new Dot();
   dots.push(d);
 }
+//Tworzenie gdzie maja byc kolka
 function draw() {
   var x = mouse.x,
       y = mouse.y;
@@ -35,10 +41,12 @@ function draw() {
 
   });
 }
+//Odczyt ruchu myszy
 addEventListener("mousemove", function(event) {
   mouse.x = event.pageX;
   mouse.y = event.pageY;
 });
+//Włączanie animacji
 function animate() {
   draw();
   requestAnimationFrame(animate);

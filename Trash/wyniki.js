@@ -1,6 +1,10 @@
+//Wyniki
+//Usuwanie nie potrzebnych elementów
 gra.style.display="none";
+//Zmiana tła
 document.getElementById("backk").style.opacity="1.0";
 document.getElementById("backk").style.background = "url('Cookiezi/ranking-panel.png')";
+//Zmiana pozycji combo, acc, score
 document.getElementById("llicznikcombo").style.left="50px";
 document.getElementById("llicznikcombo").style.bottom="40px";
 document.getElementById("llicznikacc").style.top="420px";
@@ -8,6 +12,7 @@ document.getElementById("llicznikacc").style.right="700px";
 document.getElementById("llicznikpkt").style.right="950px";
 document.getElementById("llicznikpkt").style.top="20px";
 
+//Zmiana pozycji pkt
 document.getElementById("llicznikpkt300").style.left="350px";
 document.getElementById("llicznikpkt300").style.top="120px";
 document.getElementById("llicznikpkt100").style.left="350px";
@@ -17,15 +22,18 @@ document.getElementById("llicznikpkt50").style.top="315px";
 document.getElementById("llicznikpkt0").style.left="410px";
 document.getElementById("llicznikpkt0").style.top="315px";
 
+//Zmiana wielkości
 document.getElementById("llicznikacc").style.fontSize="45px";
 document.getElementById("llicznikpkt300").style.fontSize="45px";
 document.getElementById("llicznikpkt100").style.fontSize="45px";
 document.getElementById("llicznikpkt50").style.fontSize="45px";
 document.getElementById("llicznikpkt0").style.fontSize="45px";
 
+//Dzwiek wygranej
 let WinSong = new Audio('Cookiezi/applause.mp3');
 WinSong.play();
 
+//Zapis pliku Storage
 if (localStorage.getItem('SScore') != null) {
 		let SumaPoints2=points;
 		let SumaCelnosci2=celnosc;
@@ -40,6 +48,7 @@ else{
 	SumaCelnosci2=parseInt(celnosc);
 	localStorage.setItem('SAcc', SumaCelnosci2);
 }
+//Ocena - Czy automatyczna gra to była
 if(drugi1==2){
 let locena = new Image(400,500);    //Ocena
 locena.setAttribute("id","locena");
@@ -73,6 +82,7 @@ quitt.src = 'Cookiezi/menu-back.png';
 document.getElementById('MainMenu').appendChild(quitt);
 
 //TEKST KONCOWY WYNIKU
+//Dla oceny D
 if(miss>10){
 		if(drugi1==1){
 			let locena = new Image(400,500);    //Ocena
@@ -86,6 +96,7 @@ if(miss>10){
 		TekstKon.innerHTML=textnode9;
 		Menug.appendChild(TekstKon);
 }
+//Dla oceny A
 if(miss<=10){
 		if(miss!=0)
 		{
@@ -102,6 +113,7 @@ if(miss<=10){
 			Menug.appendChild(TekstKon);
 		}
 }
+//Dla oceny S
 if(miss==0){
 		if(drugi1==1){
 			let locena = new Image(400,500);    //Ocena
@@ -115,7 +127,7 @@ if(miss==0){
 		TekstKon.innerHTML=textnode9;
 		Menug.appendChild(TekstKon);
 }
-
+//Przycisk - Wyjście
 quitt.addEventListener("mousedown", function(){
 		location.reload();
 });

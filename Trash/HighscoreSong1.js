@@ -10,28 +10,31 @@ let button7 = document.createElement('button');
 let body = document.querySelector("body");
 let dl1=window.screen.availHeight;
 let dl2=window.screen.availWidth;
+//Definicja przyciskow
 document.getElementById('foo').appendChild(button);
 document.getElementById('foo').appendChild(button3);
 document.getElementById('foo').appendChild(button4);
 document.getElementById('foo').appendChild(button5);
 document.getElementById('foo').appendChild(button6);
 document.getElementById('foo').appendChild(button7);
+//Definicja nazw przycisków
 button.innerText="Start";
 button3.innerText="Opacity: 0%";
 button4.innerText="Opacity: 25%";
 button5.innerText="Opacity: 50%";
 button6.innerText="Opacity: 75%";
 button7.innerText="Opacity: 100%";
+//Dane dzwiekow
 let MenuClick1 = new Audio('Cookiezi/menuclick.wav');
 let MenuClick2 = new Audio('Cookiezi/MenuHit.wav');
 
-//Funkcje: Tło, rozmiar tła
+//Funkcja - tlo
 function backgrounds(){
 	document.getElementById("backk").style.background = "url('Songs/"+pierwszy1+"/bg.jpg')";
 	document.getElementById("pudlo").style.display = "none";
 	document.getElementById("index").style.display = "none";
 }
-
+//Funkcja - rozmiar tla
 function resizeDivs() {
 		let main = document.getElementById('backk').offsetHeight;
 		let sidebar = document.getElementById('body').offsetHeight;
@@ -68,26 +71,32 @@ function giereczka(){
 		load('GraNorm.js');
 }
 //PRZYCISKI
+//Opacity 0
 button3.onclick=()=>{
 		document.getElementById("backk").style.opacity="0.0";
 		MenuClick2.play();
 }
+//Opacity 0.25
 button4.onclick=()=>{
 		document.getElementById("backk").style.opacity="0.25";
 		MenuClick2.play();
 }
+//Opacity 0.5
 button5.onclick=()=>{
 		document.getElementById("backk").style.opacity="0.5";
 		MenuClick2.play();
 }
+//Opacity 0.75
 button6.onclick=()=>{
 		document.getElementById("backk").style.opacity="0.75";
 		MenuClick2.play();
 }
+//Opacity 1
 button7.onclick=()=>{
 		document.getElementById("backk").style.opacity="1.0";
 		MenuClick2.play();
 }
+//Przycisk Start!
 button.onclick=()=>{
 		CCIRCLES.pause();
 		MenuClick1.play();

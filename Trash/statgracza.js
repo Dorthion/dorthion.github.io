@@ -1,4 +1,5 @@
 //Wczytanie statystyk gracza
+//Dane wejsciowe
 let wgracz = document.createElement('div');
 let performance="Score of last game: ";
 let accuracy="Accuracy of last game: ";
