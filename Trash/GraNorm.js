@@ -368,7 +368,7 @@
 				celnosc=celnosc-5;
 				miss++;
 				l9=0;
-				llicznikhp.value -= 10;
+				llicznikhp.value -= 30;
 				let textnode8 ="Miss: "+miss;
 				llicznikpkt0.innerHTML=textnode8;
 				Menug.appendChild(llicznikpkt0);
