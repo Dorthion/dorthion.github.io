@@ -23,7 +23,7 @@ document.getElementById("llicznikpkt100").style.fontSize="45px";
 document.getElementById("llicznikpkt50").style.fontSize="45px";
 document.getElementById("llicznikpkt0").style.fontSize="45px";
 
-let WinSong = new Audio('Cookiezi/applause2.wav');
+let WinSong = new Audio('Cookiezi/applause.mp3');
 WinSong.play();
 
 if (localStorage.getItem('SScore') != null) {
