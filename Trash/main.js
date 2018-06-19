@@ -87,7 +87,6 @@ addDiv();
 		let logoTime = Date.now();
 		let logointerval = setInterval(function() {
 			let elapsedTimeXD = Date.now() - logoTime;
-			//console.log("tak");
 			if(elapsedTimeXD>5000 && elapsedTimeXD<6000){
 				czyruszony=0;
 				document.getElementById("logoosu2").setAttribute("id", "logoosu3");
@@ -126,7 +125,6 @@ addDiv();
 		document.getElementById("BUTTON3").style.display = "inline";
 		document.getElementById("BUTTON4").style.display = "inline";
 		MenuClick1.play();
-		//console.log("I bardzo dobrze");
 	});
 	
 	playy.addEventListener("mousedown", function(){

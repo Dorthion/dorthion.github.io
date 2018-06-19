@@ -196,8 +196,6 @@
 				}
 			//Zmiana ich pozycji
 				function cirlees(x_pos, y_pos) {
-					//console.log("KOLECZKO: "+cyfra);
-					//console.log("NUMEEER KOLECZKA: "+nrkolka);
 					let ciircle = document.getElementById('apcircle'+cyfra);
 					let overcircles = document.getElementById('o'+cyfra);
 					let numerek = document.getElementById('c'+cyfra);
@@ -236,6 +234,7 @@
 					document.getElementById("apcircle1").style.display = "none";
 					document.getElementById("o1").style.display = "none";
 					document.getElementById("c1").style.display = "none";
+					Cclick.play();
 					l1++;
 			});
 			if(l1>0){
@@ -251,6 +250,7 @@
 					document.getElementById("apcircle2").style.display = "none";
 					document.getElementById("o2").style.display = "none";
 					document.getElementById("c2").style.display = "none";
+					Cclick.play();
 					l2++;
 			});
 			if(l2>0){
@@ -266,6 +266,7 @@
 					document.getElementById("apcircle3").style.display = "none";
 					document.getElementById("o3").style.display = "none";
 					document.getElementById("c3").style.display = "none";
+					Cclick.play();
 					l3++;
 			});
 			if(l3>0){
@@ -281,6 +282,7 @@
 					document.getElementById("apcircle4").style.display = "none";
 					document.getElementById("o4").style.display = "none";
 					document.getElementById("c4").style.display = "none";
+					Cclick.play();
 					l4++;
 			});
 			if(l4>0){
@@ -296,6 +298,7 @@
 					document.getElementById("apcircle5").style.display = "none";
 					document.getElementById("o5").style.display = "none";
 					document.getElementById("c5").style.display = "none";
+					Cclick.play();
 					l5++;
 			});
 			if(l5>0){
@@ -311,6 +314,7 @@
 					document.getElementById("apcircle6").style.display = "none";
 					document.getElementById("o6").style.display = "none";
 					document.getElementById("c6").style.display = "none";
+					Cclick.play();
 					l6++;
 			});
 			if(l6>0){
@@ -326,6 +330,7 @@
 					document.getElementById("apcircle7").style.display = "none";
 					document.getElementById("o7").style.display = "none";
 					document.getElementById("c7").style.display = "none";
+					Cclick.play();
 					l7++;
 			});
 			if(l7>0){
@@ -341,6 +346,7 @@
 					document.getElementById("apcircle8").style.display = "none";
 					document.getElementById("o8").style.display = "none";
 					document.getElementById("c8").style.display = "none";
+					Cclick.play();
 					l8++;
 			});	
 			if(l8>0){
@@ -353,16 +359,10 @@
 					l8=0;
 			}
 			BgMiss.addEventListener("mousedown", function(){
-				//console.log("TAK");
 					l9++;
 			});	
 			if(l9>0)
 			{
-				/*combopob=combo;
-				if(combomax<=combopob){
-					combomax=combopob;
-				}
-				combopob=0;*/
 				combo=0;
 				celnosc=celnosc-5;
 				miss++;
@@ -384,11 +384,7 @@
 			}
 			//Czyszczenie po grze oraz wyniki
 			if(endtime<elapsedTime3){
-				/*let textnode2 =combomax+"x";
-				llicznikcombo.innerHTML=textnode2;
-				Menug.appendChild(llicznikcombo);*/
 				clearInterval(interval3);
 				load('wyniki.js');
 			}
-	}, 1);
-				
+	}, 1);	

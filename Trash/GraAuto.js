@@ -18,6 +18,7 @@
 		let gra = document.createElement('div');
 		let Cclick = new Audio('Cookiezi/normal-hitclap.wav');
 		load('Songs/'+pierwszy1+'/song.js');
+//Statyczna zmiana tła
 		document.getElementById("backk").style.background = "url('Songs/"+pierwszy1+"/bg.jpg')";
 //Plansza + wczytanie kółek
 		gra.innerHTML += '<img id="llicznikhp2" src="Cookiezi/button-middle.png"/>';
@@ -173,9 +174,6 @@
 					}
 					g++;
 				}
-				/*if((parseInt(song[2+licznik3+3])-parseInt(song[2+licznik3]))>4000){
-					clean();
-				}*/
 				nrkolka2=nrkolka2+1;
 				//Pokazanie, że istnieją
 				if(g>7){
@@ -185,8 +183,6 @@
 				}
 				//Zmiana ich pozycji
 				function cirlees(x_pos, y_pos) {
-					console.log("KOLECZKO: "+cyfra);
-					console.log("NUMEEER KOLECZKA: "+nrkolka);
 					let ciircle = document.getElementById('apcircle'+cyfra);
 					let overcircles = document.getElementById('o'+cyfra);
 					let numerek = document.getElementById('c'+cyfra);
@@ -231,4 +227,3 @@
 					clearInterval(interval3);
 			}
 	}, 1);
-				
