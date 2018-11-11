@@ -5,9 +5,9 @@
 }
 body{
 	background-color:black;
-	color:white;
-	font-family: 'Cormorant Garamond', serif;
-	font-size:30px;
+	color:black;
+	font-family: 'Open Sans', sans-serif;
+	font-size:50px;
 }
 #osu{
 	position:absolute;
@@ -19,7 +19,25 @@ body{
 	height:50px;
 }
 a{
-	color:white;
-	font-family: 'Cormorant Garamond', serif;
+	color:black;
+	font-family: 'Open Sans', sans-serif;
 	font-size:30px;
+}
+#MainPage{
+	margin-left:1%;
+	margin-top:1%;
+	width:98%;
+	height:100%;
+	background:url('Background.JPG') no-repeat;
+	background-size: 100% 100%;
+	box-shadow: 0 0	20px 20px black inset;
+	background-position: calc(50%) top;
+	/*position: relative;
+	background: url(../images/cover_bgv2.svg) no-repeat; bez v2 dla 50-lecia
+	background-position: calc(50%) top;
+	height: 100%;
+	color: #fff;*/
+	min-height: 720px;
+	max-height: 1080px;
+
 }
